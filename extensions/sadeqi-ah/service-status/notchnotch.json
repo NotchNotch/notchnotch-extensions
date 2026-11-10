@@ -1,0 +1,27 @@
+{
+  "id": "dev.notchnotch.service-status",
+  "name": "Service Status",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "bundle.js",
+  "permissions": [],
+  "icon": "icon.png",
+  "description": "Know right away when GitHub, Cloudflare or another service you rely on has an incident.",
+  "categories": [
+    "Developer Tools"
+  ],
+  "license": "MIT",
+  "author": "sadeqi-ah",
+  "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/service-status",
+  "network": [
+    "www.githubstatus.com",
+    "www.cloudflarestatus.com",
+    "status.openai.com",
+    "status.claude.com",
+    "discordstatus.com",
+    "status.npmjs.org",
+    "www.vercel-status.com",
+    "status.atlassian.com",
+    "status.dropbox.com"
+  ]
+}
