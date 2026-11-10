@@ -1,0 +1,14 @@
+{
+  "name": "notchnotch-extensions",
+  "private": true,
+  "type": "module",
+  "description": "CI for the NotchNotch Store. Each extension has its own package.json.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node scripts/check.mjs --base origin/main",
+    "check:all": "node scripts/check.mjs --all",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

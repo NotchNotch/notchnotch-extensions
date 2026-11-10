@@ -1,0 +1,53 @@
+name: Publish
+
+on:
+  push:
+    branches: [main]
+    paths: ["extensions/**"]
+  schedule:
+    # Re-sign weekly so the catalog never expires (it is valid for 30 days).
+    - cron: "17 4 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: catalog
+  cancel-in-progress: false
+
+jobs:
+  # Runs extension code (npm install, the build), so it gets no secrets and a read-only token.
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: node scripts/build-packages.mjs out
+      - uses: actions/upload-artifact@v7
+        with:
+          name: packages
+          path: out
+          retention-days: 7
+
+  # Holds the signing key and write access, and runs no extension code.
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - uses: actions/download-artifact@v8
+        with:
+          name: packages
+          path: out
+      - name: Release packages and sign the catalog
+        env:
+          CATALOG_PRIVATE_KEY: ${{ secrets.CATALOG_PRIVATE_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/publish.mjs out ${{ github.event_name == 'schedule' && '--refresh' || '' }}
