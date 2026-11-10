@@ -1,7 +1,38 @@
 {
   "format": 1,
-  "sequence": 1,
-  "generated": "2026-11-10T05:35:27Z",
-  "expires": "2026-12-10T05:35:27Z",
-  "extensions": []
+  "sequence": 2,
+  "generated": "2026-11-10T09:08:13Z",
+  "expires": "2026-12-10T09:08:13Z",
+  "extensions": [
+    {
+      "handle": "sadeqi-ah/focus-timer",
+      "manifest": {
+        "id": "dev.notchnotch.focus-timer",
+        "name": "Focus Timer",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "description": "Work in focused sessions with breaks, right from the notch.",
+        "categories": [
+          "Productivity"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/focus-timer"
+      },
+      "package": {
+        "url": "https://github.com/sadeqi-ah/notchnotch-extensions/releases/download/sadeqi-ah.focus-timer%401.0.0/focus-timer-1.0.0.notchext",
+        "sha256": "e97ceadf23280a9571f32eb220ec3067c811ae28af590db631703acfe15762a8",
+        "size": 377778
+      },
+      "icon": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/89fb0cd4702f86528682ff52bea48a769deddc29/extensions/sadeqi-ah/focus-timer/assets/icon.png",
+      "iconDark": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/89fb0cd4702f86528682ff52bea48a769deddc29/extensions/sadeqi-ah/focus-timer/assets/icon@dark.png",
+      "readme": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/89fb0cd4702f86528682ff52bea48a769deddc29/extensions/sadeqi-ah/focus-timer/README.md",
+      "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/89fb0cd4702f86528682ff52bea48a769deddc29/extensions/sadeqi-ah/focus-timer/CHANGELOG.md",
+      "minimumAppVersion": "0.7.0",
+      "published": "2026-11-10T09:08:13Z"
+    }
+  ]
 }
