@@ -1,0 +1,67 @@
+{
+  "id": "dev.notchnotch.crypto-prices",
+  "name": "Crypto Prices",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "bundle.js",
+  "permissions": [],
+  "icon": "icon.png",
+  "description": "Prices and daily change for the coins you follow.",
+  "categories": [
+    "Finance"
+  ],
+  "license": "MIT",
+  "author": "sadeqi-ah",
+  "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/crypto-prices",
+  "network": [
+    "api.coingecko.com"
+  ],
+  "preferences": [
+    {
+      "name": "coins",
+      "type": "text",
+      "title": "Coins",
+      "default": "bitcoin, ethereum, solana",
+      "description": "CoinGecko coin IDs separated by commas, such as bitcoin. Up to eight."
+    },
+    {
+      "name": "currency",
+      "type": "dropdown",
+      "title": "Currency",
+      "default": "usd",
+      "options": [
+        {
+          "value": "usd",
+          "title": "US Dollar"
+        },
+        {
+          "value": "eur",
+          "title": "Euro"
+        },
+        {
+          "value": "gbp",
+          "title": "British Pound"
+        },
+        {
+          "value": "jpy",
+          "title": "Japanese Yen"
+        },
+        {
+          "value": "cad",
+          "title": "Canadian Dollar"
+        },
+        {
+          "value": "aud",
+          "title": "Australian Dollar"
+        }
+      ]
+    },
+    {
+      "name": "besideNotch",
+      "type": "toggle",
+      "title": "Show Beside the Notch",
+      "default": false,
+      "description": "Keep the first coin's price next to the camera. When off, it appears when you hover over the notch."
+    }
+  ]
+}
