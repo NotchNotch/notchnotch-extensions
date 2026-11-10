@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "sequence": 3,
-  "generated": "2026-11-10T09:08:45Z",
-  "expires": "2026-12-10T09:08:45Z",
+  "sequence": 4,
+  "generated": "2026-11-10T09:09:29Z",
+  "expires": "2026-12-10T09:09:29Z",
   "extensions": [
     {
       "handle": "sadeqi-ah/break-reminder",
@@ -89,6 +89,87 @@
       "published": "2026-11-10T09:08:45Z"
     },
     {
+      "handle": "sadeqi-ah/crypto-prices",
+      "manifest": {
+        "id": "dev.notchnotch.crypto-prices",
+        "name": "Crypto Prices",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "description": "Prices and daily change for the coins you follow.",
+        "categories": [
+          "Finance"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/crypto-prices",
+        "network": [
+          "api.coingecko.com"
+        ],
+        "preferences": [
+          {
+            "name": "coins",
+            "type": "text",
+            "title": "Coins",
+            "default": "bitcoin, ethereum, solana",
+            "description": "CoinGecko coin IDs separated by commas, such as bitcoin. Up to eight."
+          },
+          {
+            "name": "currency",
+            "type": "dropdown",
+            "title": "Currency",
+            "default": "usd",
+            "options": [
+              {
+                "value": "usd",
+                "title": "US Dollar"
+              },
+              {
+                "value": "eur",
+                "title": "Euro"
+              },
+              {
+                "value": "gbp",
+                "title": "British Pound"
+              },
+              {
+                "value": "jpy",
+                "title": "Japanese Yen"
+              },
+              {
+                "value": "cad",
+                "title": "Canadian Dollar"
+              },
+              {
+                "value": "aud",
+                "title": "Australian Dollar"
+              }
+            ]
+          },
+          {
+            "name": "besideNotch",
+            "type": "toggle",
+            "title": "Show Beside the Notch",
+            "default": false,
+            "description": "Keep the first coin's price next to the camera. When off, it appears when you hover over the notch."
+          }
+        ]
+      },
+      "package": {
+        "url": "https://github.com/sadeqi-ah/notchnotch-extensions/releases/download/sadeqi-ah.crypto-prices%401.0.0/crypto-prices-1.0.0.notchext",
+        "sha256": "7d3a4fb1e8bfff6bea57241297ef14cde7ff368d7f0c8a033cb33ba65fdea7b0",
+        "size": 352863
+      },
+      "icon": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/crypto-prices/assets/icon.png",
+      "iconDark": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/crypto-prices/assets/icon@dark.png",
+      "readme": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/crypto-prices/README.md",
+      "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/crypto-prices/CHANGELOG.md",
+      "minimumAppVersion": "0.7.0",
+      "published": "2026-11-10T09:09:29Z"
+    },
+    {
       "handle": "sadeqi-ah/focus-timer",
       "manifest": {
         "id": "dev.notchnotch.focus-timer",
@@ -117,6 +198,159 @@
       "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/89fb0cd4702f86528682ff52bea48a769deddc29/extensions/sadeqi-ah/focus-timer/CHANGELOG.md",
       "minimumAppVersion": "0.7.0",
       "published": "2026-11-10T09:08:13Z"
+    },
+    {
+      "handle": "sadeqi-ah/github-notifications",
+      "manifest": {
+        "id": "dev.notchnotch.github-notifications",
+        "name": "GitHub Notifications",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "description": "Your unread GitHub notifications, with the count beside the notch.",
+        "categories": [
+          "Developer Tools"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/github-notifications",
+        "network": [
+          "api.github.com"
+        ],
+        "preferences": [
+          {
+            "name": "token",
+            "type": "password",
+            "title": "Personal Access Token",
+            "required": true,
+            "description": "A classic token with the notifications scope. It's kept in your Keychain and only sent to api.github.com."
+          },
+          {
+            "name": "participating",
+            "type": "toggle",
+            "title": "Only Participating",
+            "default": false,
+            "description": "Only threads you're directly involved in, such as mentions and reviews requested from you."
+          }
+        ]
+      },
+      "package": {
+        "url": "https://github.com/sadeqi-ah/notchnotch-extensions/releases/download/sadeqi-ah.github-notifications%401.0.0/github-notifications-1.0.0.notchext",
+        "sha256": "26301e7047b574d3dc40197dd48f0a56e4c574cae785f64273ff7bed43620488",
+        "size": 367260
+      },
+      "icon": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/github-notifications/assets/icon.png",
+      "iconDark": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/github-notifications/assets/icon@dark.png",
+      "readme": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/github-notifications/README.md",
+      "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/github-notifications/CHANGELOG.md",
+      "minimumAppVersion": "0.7.0",
+      "published": "2026-11-10T09:09:29Z"
+    },
+    {
+      "handle": "sadeqi-ah/hacker-news",
+      "manifest": {
+        "id": "dev.notchnotch.hacker-news",
+        "name": "Hacker News",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "description": "The top stories on Hacker News, a click away.",
+        "categories": [
+          "News"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/hacker-news",
+        "network": [
+          "hacker-news.firebaseio.com"
+        ]
+      },
+      "package": {
+        "url": "https://github.com/sadeqi-ah/notchnotch-extensions/releases/download/sadeqi-ah.hacker-news%401.0.0/hacker-news-1.0.0.notchext",
+        "sha256": "3cfddfea354e69b1fbd1a1be5b2a6e9a7478547a205006fae920eb076e45de4c",
+        "size": 361764
+      },
+      "icon": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/hacker-news/assets/icon.png",
+      "iconDark": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/hacker-news/assets/icon@dark.png",
+      "readme": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/hacker-news/README.md",
+      "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/hacker-news/CHANGELOG.md",
+      "minimumAppVersion": "0.7.0",
+      "published": "2026-11-10T09:09:29Z"
+    },
+    {
+      "handle": "sadeqi-ah/moon-phase",
+      "manifest": {
+        "id": "dev.notchnotch.moon-phase",
+        "name": "Moon Phase",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "description": "Tonight's moon, how much of it is lit, and when the next full moon rises.",
+        "categories": [
+          "Fun"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/moon-phase"
+      },
+      "package": {
+        "url": "https://github.com/sadeqi-ah/notchnotch-extensions/releases/download/sadeqi-ah.moon-phase%401.0.0/moon-phase-1.0.0.notchext",
+        "sha256": "64ff23f866155be07d69f0bb37999da652082aea0212124b1e615c4e87ee7d34",
+        "size": 371122
+      },
+      "icon": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/moon-phase/assets/icon.png",
+      "iconDark": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/moon-phase/assets/icon@dark.png",
+      "readme": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/moon-phase/README.md",
+      "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/moon-phase/CHANGELOG.md",
+      "minimumAppVersion": "0.7.0",
+      "published": "2026-11-10T09:09:29Z"
+    },
+    {
+      "handle": "sadeqi-ah/service-status",
+      "manifest": {
+        "id": "dev.notchnotch.service-status",
+        "name": "Service Status",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "description": "Know right away when GitHub, Cloudflare or another service you rely on has an incident.",
+        "categories": [
+          "Developer Tools"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/service-status",
+        "network": [
+          "www.githubstatus.com",
+          "www.cloudflarestatus.com",
+          "status.openai.com",
+          "status.claude.com",
+          "discordstatus.com",
+          "status.npmjs.org",
+          "www.vercel-status.com",
+          "status.atlassian.com",
+          "status.dropbox.com"
+        ]
+      },
+      "package": {
+        "url": "https://github.com/sadeqi-ah/notchnotch-extensions/releases/download/sadeqi-ah.service-status%401.0.0/service-status-1.0.0.notchext",
+        "sha256": "99d7ac6d6fa2ae30c3a22c1de9add0cdd99f658fd6e3246844283aa33cf8b378",
+        "size": 354005
+      },
+      "icon": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/service-status/assets/icon.png",
+      "iconDark": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/service-status/assets/icon@dark.png",
+      "readme": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/service-status/README.md",
+      "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/service-status/CHANGELOG.md",
+      "minimumAppVersion": "0.7.0",
+      "published": "2026-11-10T09:09:29Z"
     },
     {
       "handle": "sadeqi-ah/weather",
@@ -184,6 +418,39 @@
       "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/weather/CHANGELOG.md",
       "minimumAppVersion": "0.7.0",
       "published": "2026-11-10T09:08:45Z"
+    },
+    {
+      "handle": "sadeqi-ah/word-of-the-day",
+      "manifest": {
+        "id": "dev.notchnotch.word-of-the-day",
+        "name": "Word of the Day",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "description": "A new English word every day, with its meaning and an example.",
+        "categories": [
+          "Fun"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/word-of-the-day",
+        "network": [
+          "api.dictionaryapi.dev"
+        ]
+      },
+      "package": {
+        "url": "https://github.com/sadeqi-ah/notchnotch-extensions/releases/download/sadeqi-ah.word-of-the-day%401.0.0/word-of-the-day-1.0.0.notchext",
+        "sha256": "586c26aa941e22252ab35bfb11a1df5dbfb902ff2bd4c4e3be8bbe9a7630d6ea",
+        "size": 374642
+      },
+      "icon": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/word-of-the-day/assets/icon.png",
+      "iconDark": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/word-of-the-day/assets/icon@dark.png",
+      "readme": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/word-of-the-day/README.md",
+      "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/af474062039e271ab0bcedd29c8bd58db0d7b262/extensions/sadeqi-ah/word-of-the-day/CHANGELOG.md",
+      "minimumAppVersion": "0.7.0",
+      "published": "2026-11-10T09:09:29Z"
     },
     {
       "handle": "sadeqi-ah/world-clock",
