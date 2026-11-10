@@ -1,0 +1,19 @@
+{
+  "id": "dev.notchnotch.hacker-news",
+  "name": "Hacker News",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "bundle.js",
+  "permissions": [],
+  "icon": "icon.png",
+  "description": "The top stories on Hacker News, a click away.",
+  "categories": [
+    "News"
+  ],
+  "license": "MIT",
+  "author": "sadeqi-ah",
+  "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/hacker-news",
+  "network": [
+    "hacker-news.firebaseio.com"
+  ]
+}
