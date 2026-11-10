@@ -59,6 +59,9 @@ for (const handle of await listHandles()) {
   const screenshots = (await readdir(path.join(folderOf(handle), "metadata")).catch(() => []))
     .filter((name) => name.endsWith(".png")).sort().slice(0, maximumScreenshots);
   if (screenshots.length) entry.screenshots = screenshots.map((name) => raw(handle, `metadata/${name}`));
+  for (const [key, file] of [["readme", "README.md"], ["changelog", "CHANGELOG.md"]]) {
+    if (await exists(path.join(folderOf(handle), file))) entry[key] = raw(handle, file);
+  }
   entry.minimumAppVersion = minimumAppVersion;
   entry.published = now.toISOString().replace(/\.\d+Z$/, "Z");
   extensions.push(entry);
