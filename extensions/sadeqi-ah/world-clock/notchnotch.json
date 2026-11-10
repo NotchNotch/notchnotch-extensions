@@ -1,0 +1,31 @@
+{
+  "id": "dev.notchnotch.world-clock",
+  "name": "World Clock",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "bundle.js",
+  "permissions": [],
+  "icon": "icon.png",
+  "description": "The time in the cities you work with, one glance away.",
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "author": "sadeqi-ah",
+  "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/world-clock",
+  "preferences": [
+    {
+      "name": "zones",
+      "type": "text",
+      "title": "Cities",
+      "default": "America/New_York, Europe/London, Asia/Tokyo",
+      "description": "Time zone names separated by commas, such as Europe/Paris. Up to six."
+    },
+    {
+      "name": "hour24",
+      "type": "toggle",
+      "title": "24-Hour Time",
+      "default": false
+    }
+  ]
+}
