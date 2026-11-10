@@ -1,0 +1,16 @@
+{
+  "id": "dev.notchnotch.moon-phase",
+  "name": "Moon Phase",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "bundle.js",
+  "permissions": [],
+  "icon": "icon.png",
+  "description": "Tonight's moon, how much of it is lit, and when the next full moon rises.",
+  "categories": [
+    "Fun"
+  ],
+  "license": "MIT",
+  "author": "sadeqi-ah",
+  "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/moon-phase"
+}
