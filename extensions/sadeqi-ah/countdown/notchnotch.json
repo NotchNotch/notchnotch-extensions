@@ -1,0 +1,40 @@
+{
+  "id": "dev.notchnotch.countdown",
+  "name": "Countdown",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "bundle.js",
+  "permissions": [],
+  "icon": "icon.png",
+  "description": "Count down the days to a launch, a trip or a deadline.",
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "author": "sadeqi-ah",
+  "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/countdown",
+  "preferences": [
+    {
+      "name": "event",
+      "type": "text",
+      "title": "Event",
+      "default": "New Year",
+      "description": "What you're counting down to."
+    },
+    {
+      "name": "date",
+      "type": "text",
+      "title": "Date",
+      "default": "2027-01-01",
+      "placeholder": "2027-01-01 09:00",
+      "description": "YYYY-MM-DD, or YYYY-MM-DD HH:MM for a time, in your time zone."
+    },
+    {
+      "name": "besideNotch",
+      "type": "toggle",
+      "title": "Show Beside the Notch",
+      "default": true,
+      "description": "Keep the countdown next to the camera. When off, it appears when you hover over the notch."
+    }
+  ]
+}
