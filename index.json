@@ -1,9 +1,93 @@
 {
   "format": 1,
-  "sequence": 2,
-  "generated": "2026-11-10T09:08:13Z",
-  "expires": "2026-12-10T09:08:13Z",
+  "sequence": 3,
+  "generated": "2026-11-10T09:08:45Z",
+  "expires": "2026-12-10T09:08:45Z",
   "extensions": [
+    {
+      "handle": "sadeqi-ah/break-reminder",
+      "manifest": {
+        "id": "dev.notchnotch.break-reminder",
+        "name": "Break Reminder",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "description": "A gentle nudge to stand up and rest your eyes at regular intervals.",
+        "categories": [
+          "Health"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/break-reminder"
+      },
+      "package": {
+        "url": "https://github.com/sadeqi-ah/notchnotch-extensions/releases/download/sadeqi-ah.break-reminder%401.0.0/break-reminder-1.0.0.notchext",
+        "sha256": "5ed8dc5d6baf98cd9ca4889b02c5808f8e925e016b3ae7afd990b688873e4561",
+        "size": 376171
+      },
+      "icon": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/break-reminder/assets/icon.png",
+      "iconDark": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/break-reminder/assets/icon@dark.png",
+      "readme": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/break-reminder/README.md",
+      "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/break-reminder/CHANGELOG.md",
+      "minimumAppVersion": "0.7.0",
+      "published": "2026-11-10T09:08:45Z"
+    },
+    {
+      "handle": "sadeqi-ah/countdown",
+      "manifest": {
+        "id": "dev.notchnotch.countdown",
+        "name": "Countdown",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "description": "Count down the days to a launch, a trip or a deadline.",
+        "categories": [
+          "Productivity"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/countdown",
+        "preferences": [
+          {
+            "name": "event",
+            "type": "text",
+            "title": "Event",
+            "default": "New Year",
+            "description": "What you're counting down to."
+          },
+          {
+            "name": "date",
+            "type": "text",
+            "title": "Date",
+            "default": "2027-01-01",
+            "placeholder": "2027-01-01 09:00",
+            "description": "YYYY-MM-DD, or YYYY-MM-DD HH:MM for a time, in your time zone."
+          },
+          {
+            "name": "besideNotch",
+            "type": "toggle",
+            "title": "Show Beside the Notch",
+            "default": true,
+            "description": "Keep the countdown next to the camera. When off, it appears when you hover over the notch."
+          }
+        ]
+      },
+      "package": {
+        "url": "https://github.com/sadeqi-ah/notchnotch-extensions/releases/download/sadeqi-ah.countdown%401.0.0/countdown-1.0.0.notchext",
+        "sha256": "b5e324fd2965dfa768689a1fdf89f9f1d665bae3cd707e40e848147c514d2393",
+        "size": 364816
+      },
+      "icon": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/countdown/assets/icon.png",
+      "iconDark": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/countdown/assets/icon@dark.png",
+      "readme": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/countdown/README.md",
+      "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/countdown/CHANGELOG.md",
+      "minimumAppVersion": "0.7.0",
+      "published": "2026-11-10T09:08:45Z"
+    },
     {
       "handle": "sadeqi-ah/focus-timer",
       "manifest": {
@@ -33,6 +117,118 @@
       "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/89fb0cd4702f86528682ff52bea48a769deddc29/extensions/sadeqi-ah/focus-timer/CHANGELOG.md",
       "minimumAppVersion": "0.7.0",
       "published": "2026-11-10T09:08:13Z"
+    },
+    {
+      "handle": "sadeqi-ah/weather",
+      "manifest": {
+        "id": "dev.notchnotch.weather",
+        "name": "Weather",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "description": "Current conditions and today's high and low for your city.",
+        "categories": [
+          "Weather"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/weather",
+        "network": [
+          "api.open-meteo.com",
+          "geocoding-api.open-meteo.com"
+        ],
+        "preferences": [
+          {
+            "name": "city",
+            "type": "text",
+            "title": "City",
+            "default": "London",
+            "placeholder": "London",
+            "description": "The city to show the weather for."
+          },
+          {
+            "name": "units",
+            "type": "dropdown",
+            "title": "Units",
+            "default": "metric",
+            "options": [
+              {
+                "value": "metric",
+                "title": "Celsius, km/h"
+              },
+              {
+                "value": "imperial",
+                "title": "Fahrenheit, mph"
+              }
+            ]
+          },
+          {
+            "name": "besideNotch",
+            "type": "toggle",
+            "title": "Show Beside the Notch",
+            "default": true,
+            "description": "Keep the temperature next to the camera. When off, it appears when you hover over the notch."
+          }
+        ]
+      },
+      "package": {
+        "url": "https://github.com/sadeqi-ah/notchnotch-extensions/releases/download/sadeqi-ah.weather%401.0.0/weather-1.0.0.notchext",
+        "sha256": "7361cfabb873c7502c2c86b59bc57f5b094526585a7e4b0820ccf14bfc333bfd",
+        "size": 373016
+      },
+      "icon": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/weather/assets/icon.png",
+      "iconDark": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/weather/assets/icon@dark.png",
+      "readme": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/weather/README.md",
+      "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/weather/CHANGELOG.md",
+      "minimumAppVersion": "0.7.0",
+      "published": "2026-11-10T09:08:45Z"
+    },
+    {
+      "handle": "sadeqi-ah/world-clock",
+      "manifest": {
+        "id": "dev.notchnotch.world-clock",
+        "name": "World Clock",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "description": "The time in the cities you work with, one glance away.",
+        "categories": [
+          "Productivity"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/world-clock",
+        "preferences": [
+          {
+            "name": "zones",
+            "type": "text",
+            "title": "Cities",
+            "default": "America/New_York, Europe/London, Asia/Tokyo",
+            "description": "Time zone names separated by commas, such as Europe/Paris. Up to six."
+          },
+          {
+            "name": "hour24",
+            "type": "toggle",
+            "title": "24-Hour Time",
+            "default": false
+          }
+        ]
+      },
+      "package": {
+        "url": "https://github.com/sadeqi-ah/notchnotch-extensions/releases/download/sadeqi-ah.world-clock%401.0.0/world-clock-1.0.0.notchext",
+        "sha256": "3dd0f09cd31b242c07e137d814e41e4b894ec440ae120dc0ee18e251b822e2f6",
+        "size": 376663
+      },
+      "icon": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/world-clock/assets/icon.png",
+      "iconDark": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/world-clock/assets/icon@dark.png",
+      "readme": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/world-clock/README.md",
+      "changelog": "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/aa607b8bc2cdb1de2249b585e14c1f56bfafda7c/extensions/sadeqi-ah/world-clock/CHANGELOG.md",
+      "minimumAppVersion": "0.7.0",
+      "published": "2026-11-10T09:08:45Z"
     }
   ]
 }
