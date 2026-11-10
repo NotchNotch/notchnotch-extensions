@@ -1,0 +1,53 @@
+{
+  "id": "dev.notchnotch.weather",
+  "name": "Weather",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "bundle.js",
+  "permissions": [],
+  "icon": "icon.png",
+  "description": "Current conditions and today's high and low for your city.",
+  "categories": [
+    "Weather"
+  ],
+  "license": "MIT",
+  "author": "sadeqi-ah",
+  "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/weather",
+  "network": [
+    "api.open-meteo.com",
+    "geocoding-api.open-meteo.com"
+  ],
+  "preferences": [
+    {
+      "name": "city",
+      "type": "text",
+      "title": "City",
+      "default": "London",
+      "placeholder": "London",
+      "description": "The city to show the weather for."
+    },
+    {
+      "name": "units",
+      "type": "dropdown",
+      "title": "Units",
+      "default": "metric",
+      "options": [
+        {
+          "value": "metric",
+          "title": "Celsius, km/h"
+        },
+        {
+          "value": "imperial",
+          "title": "Fahrenheit, mph"
+        }
+      ]
+    },
+    {
+      "name": "besideNotch",
+      "type": "toggle",
+      "title": "Show Beside the Notch",
+      "default": true,
+      "description": "Keep the temperature next to the camera. When off, it appears when you hover over the notch."
+    }
+  ]
+}
