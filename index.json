@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "sequence": 8,
-  "generated": "2026-11-11T23:30:58Z",
-  "expires": "2026-12-11T23:30:58Z",
+  "sequence": 9,
+  "generated": "2026-11-11T23:32:39Z",
+  "expires": "2026-12-11T23:32:39Z",
   "extensions": [
     {
       "handle": "sadeqi-ah/break-reminder",
@@ -35,6 +35,37 @@
       "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/7438d502a5ce9686e03aa568ce37e4498c5812f4/extensions/sadeqi-ah/break-reminder/CHANGELOG.md",
       "minimumAppVersion": "0.7.0",
       "published": "2026-11-11T23:30:58Z"
+    },
+    {
+      "handle": "sadeqi-ah/calendar",
+      "manifest": {
+        "id": "dev.notchnotch.calendar",
+        "name": "Calendar",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [
+          "calendar"
+        ],
+        "icon": "icon.png",
+        "description": "Your next event, with a live countdown and meeting controls. Connect the calendars already on your Mac.",
+        "categories": [
+          "Productivity"
+        ],
+        "license": "GPL-3.0-only",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/NotchNotch/notchnotch-extensions/tree/main/extensions/sadeqi-ah/calendar"
+      },
+      "package": {
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.calendar%401.0.0/calendar-1.0.0.notchext",
+        "sha256": "3ae0c7208d04816e29996584d11f2756fb09a6af346b724e47a963d089549e48",
+        "size": 349103
+      },
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/1bdd9d022a509279788f242203033c6a8ef83cfe/extensions/sadeqi-ah/calendar/assets/icon.png",
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/1bdd9d022a509279788f242203033c6a8ef83cfe/extensions/sadeqi-ah/calendar/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/1bdd9d022a509279788f242203033c6a8ef83cfe/extensions/sadeqi-ah/calendar/CHANGELOG.md",
+      "minimumAppVersion": "0.9.0",
+      "published": "2026-11-11T23:32:39Z"
     },
     {
       "handle": "sadeqi-ah/countdown",
