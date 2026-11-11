@@ -43,3 +43,10 @@ test("unchanged entries follow the repository to its new owner", async () => {
   assert.equal(moved.package.sha256, "ab");
   assert.equal(old.icon.includes("sadeqi-ah"), true, "the original isn't changed");
 });
+
+test("an extension that uses a capability needs the app that first served it", async () => {
+  const { minimumAppVersionFor, minimumAppVersion } = await import("../scripts/lib.mjs");
+  assert.equal(minimumAppVersionFor({ permissions: [] }), minimumAppVersion);
+  assert.equal(minimumAppVersionFor({ permissions: ["calendar"] }), "0.9.0");
+  assert.equal(minimumAppVersionFor({ permissions: ["local-network", "now-playing"] }), "0.9.0");
+});

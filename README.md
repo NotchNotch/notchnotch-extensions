@@ -40,7 +40,9 @@ Every pull request runs `scripts/check.mjs` on the extensions it changes:
 - Only source: no `node_modules/`, `dist/`, `.notchext` or compiled programs.
 - No `build.mjs` and no native `helpers/` yet. Store extensions use the
   standard build, and helpers will be built from source by CI in a later
-  version.
+  version. For calendars and what's playing, use the app's `calendar` and
+  `now-playing` capabilities instead of a helper; the catalog then asks for
+  NotchNotch 0.9 or later.
 - The `id` is unique and never changes. An update has a higher numeric version.
 - Dependencies install without running install scripts, TypeScript passes,
   `notchnotch build` passes the app's install checks, and `notchnotch lint`
