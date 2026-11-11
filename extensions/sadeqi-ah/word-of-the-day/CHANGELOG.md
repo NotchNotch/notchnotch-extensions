@@ -1,5 +1,9 @@
 # Word of the Day Changelog
 
+## [1.0.2]
+
+- A new Store icon in the macOS 26 style.
+
 ## [1.0.1]
 
 - Store screenshots.
