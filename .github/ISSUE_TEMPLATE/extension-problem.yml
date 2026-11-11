@@ -1,0 +1,30 @@
+name: Problem with an extension
+description: A Store extension doesn't work, or does something it shouldn't.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The extension's author is asked to look. If an extension sends data where it shouldn't, tracks you or asks for more than it needs, say so: the maintainers review that too.
+  - type: input
+    id: extension
+    attributes:
+      label: Extension
+      description: Its folder, `author/name`, as in the Store page's link.
+      placeholder: sadeqi-ah/weather
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Extension and NotchNotch versions
+      placeholder: "Weather 1.0.1, NotchNotch 0.8.0"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you expected and what happened instead. The extension's **Logs** tab in Settings & Extensions… often shows the error.
+    validations:
+      required: true
