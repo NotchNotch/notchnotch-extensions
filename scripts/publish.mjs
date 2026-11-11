@@ -12,7 +12,7 @@ import path from "node:path";
 import { parseArgs } from "node:util";
 import {
   attempt, catalogLifetimeDays, folderOf, listHandles, maximumScreenshots, minimumAppVersion, publishedCatalog, readManifest,
-  releaseNames, repository, root, run, sha256, signBytes, verifyBytes,
+  rehome, releaseNames, repository, root, run, sha256, signBytes, verifyBytes,
 } from "./lib.mjs";
 
 const { values, positionals } = parseArgs({ allowPositionals: true, options: { refresh: { type: "boolean" }, "dry-run": { type: "boolean" } } });
@@ -34,7 +34,7 @@ const extensions = [];
 for (const handle of await listHandles()) {
   const source = await readManifest(handle);
   const old = kept.get(handle);
-  if (old?.manifest.version === source.version) { extensions.push(old); continue; }
+  if (old?.manifest.version === source.version) { extensions.push(rehome(old)); continue; }
   const item = plan.get(handle);
   if (!item || item.version !== source.version) throw new Error(`${handle} ${source.version} wasn't built`);
   const file = path.join(out, item.file);

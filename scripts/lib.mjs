@@ -7,7 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-export const repository = process.env.GITHUB_REPOSITORY || "sadeqi-ah/notchnotch-extensions";
+export const repository = process.env.GITHUB_REPOSITORY || "NotchNotch/notchnotch-extensions";
 export const extensionsDirectory = path.join(root, "extensions");
 /** The first NotchNotch with the Store. Raise it when the catalog needs a newer app. */
 export const minimumAppVersion = "0.7.0";
@@ -143,4 +143,21 @@ export function verifyBytes(bytes, signatureBase64, publicKeyBase64) {
 export function releaseNames(handle, version) {
   const [author, name] = handle.split("/");
   return { tag: `${author}.${name}@${version}`, asset: `${name}-${version}.notchext` };
+}
+
+/**
+ * Points an unchanged catalog entry's links at this repository's current
+ * owner, after the repository moved. GitHub redirects the old links, but only
+ * until someone reuses the old name. Hashes stay the same, so nothing the app
+ * verifies changes.
+ */
+export function rehome(entry, current = repository) {
+  const name = current.split("/")[1];
+  const pattern = new RegExp(`^https://(github\\.com|raw\\.githubusercontent\\.com)/[^/]+/${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}/`);
+  const move = (url) => typeof url === "string" ? url.replace(pattern, (_, host) => `https://${host}/${current}/`) : url;
+  const copy = structuredClone(entry);
+  copy.package.url = move(copy.package.url);
+  for (const key of ["icon", "iconDark", "readme", "changelog"]) if (copy[key]) copy[key] = move(copy[key]);
+  if (copy.screenshots) copy.screenshots = copy.screenshots.map(move);
+  return copy;
 }

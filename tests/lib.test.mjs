@@ -25,3 +25,21 @@ test("signatures verify only with the matching key and bytes", () => {
   assert.ok(!verifyBytes(Buffer.from('{"format":2}'), signature, raw(one.publicKey, "spki", 12)));
   assert.throws(() => signBytes(body, "c2hvcnQ="), /not a base64 Ed25519 seed/);
 });
+
+test("unchanged entries follow the repository to its new owner", async () => {
+  const { rehome } = await import("../scripts/lib.mjs");
+  const old = {
+    handle: "amir/clock", manifest: { version: "1.0.0" },
+    package: { url: "https://github.com/sadeqi-ah/notchnotch-extensions/releases/download/amir.clock%401.0.0/clock-1.0.0.notchext", sha256: "ab", size: 3 },
+    icon: "https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/0123/extensions/amir/clock/assets/icon.png",
+    screenshots: ["https://raw.githubusercontent.com/sadeqi-ah/notchnotch-extensions/0123/extensions/amir/clock/metadata/1.png"],
+    readme: "https://example.com/notchnotch-extensions/README.md",
+  };
+  const moved = rehome(old, "NotchNotch/notchnotch-extensions");
+  assert.equal(moved.package.url, "https://github.com/NotchNotch/notchnotch-extensions/releases/download/amir.clock%401.0.0/clock-1.0.0.notchext");
+  assert.equal(moved.icon, "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/0123/extensions/amir/clock/assets/icon.png");
+  assert.equal(moved.screenshots[0], "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/0123/extensions/amir/clock/metadata/1.png");
+  assert.equal(moved.readme, old.readme, "links elsewhere stay");
+  assert.equal(moved.package.sha256, "ab");
+  assert.equal(old.icon.includes("sadeqi-ah"), true, "the original isn't changed");
+});
