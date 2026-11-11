@@ -50,7 +50,24 @@ CI can't judge these, so a maintainer does:
   copy another product's name, icon or look.
 
 Changes to someone else's extension need that author's approval as well as a
-maintainer's.
+maintainer's. `.github/CODEOWNERS` lists each author for their own folder.
+
+## Labels
+
+The **Labels** workflow labels every pull request by what it changes, so
+review starts from the right questions:
+
+| Label | Means |
+| --- | --- |
+| `new extension` | Adds an extension the Store doesn't have |
+| `update` | Changes an extension that is already in the Store |
+| `new author` | First folder for this author: a maintainer adds them to CODEOWNERS before merging |
+| `not the author` | Changes an extension in someone else's folder |
+| `store scripts` | Changes CI, scripts or tests |
+| `needs changes` | Set by a reviewer: waiting for the author |
+
+It runs from the base branch and reads only the pull request's file list, so
+it never runs code from the pull request.
 
 ## How publishing works
 
