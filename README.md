@@ -8,15 +8,28 @@ CI builds the `.notchext`, uploads it to a release and publishes a signed
 catalog that NotchNotch reads. The app installs a package only if it matches
 the hash in that catalog.
 
-> The Store is being built for NotchNotch 0.7. Submissions open when it ships.
+Anyone can submit an extension. Everyone here follows the
+[code of conduct](CODE_OF_CONDUCT.md).
 
 ## Adding an extension
 
 1. Build and test it locally with `notchnotch dev`. See the
    [extension docs](https://github.com/sadeqi-ah/notchnotch/tree/main/docs/extensions).
-2. Make sure `notchnotch check` and `notchnotch lint` pass and the manifest's
-   `author` is your GitHub user name.
-3. Open a pull request adding `extensions/<author>/<name>/`.
+2. Set the manifest's `author` to your GitHub user name, add a `README.md`, a
+   `CHANGELOG.md` and screenshots made with `notchnotch screenshot`.
+3. Run `npx notchnotch publish`. It runs the same checks as CI, copies your
+   source to a fork of this repository and opens the pull request. Run it
+   again after changes to update it. See
+   [Publish to the Store](https://github.com/sadeqi-ah/notchnotch/blob/main/docs/extensions/publishing.md#publish-to-the-store).
+
+You can also open the pull request by hand, adding `extensions/<author>/<name>/`.
+A maintainer reviews it, usually within a week. Your first pull request is
+labeled `new author`, and once it's merged you're listed in `CODEOWNERS` for
+your folder, so you're asked to review anyone else's change to your extensions.
+
+Questions and ideas go to
+[Discussions](https://github.com/sadeqi-ah/notchnotch/discussions); problems
+with an extension go to this repository's issues.
 
 ## What CI checks
 

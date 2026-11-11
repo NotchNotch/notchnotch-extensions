@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Submit an extension
+    url: https://github.com/sadeqi-ah/notchnotch/blob/main/docs/extensions/publishing.md#publish-to-the-store
+    about: Run `notchnotch publish` from your extension's folder; it opens the pull request for you.
+  - name: Problem with NotchNotch itself
+    url: https://github.com/sadeqi-ah/notchnotch/issues/new/choose
+    about: Bugs in the app, Music or Calendar.
+  - name: Question or extension idea
+    url: https://github.com/sadeqi-ah/notchnotch/discussions
+    about: Ask or share ideas in Discussions.
