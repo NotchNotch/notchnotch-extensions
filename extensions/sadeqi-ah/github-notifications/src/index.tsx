@@ -86,13 +86,14 @@ function GitHubNotifications() {
     </Settings>
 
     {error ? <Activity id="notifications" title="GitHub" phase="paused" idlePreview>
-      <Activity.Compact leading={<Symbol name="exclamationmark.triangle.fill" tone="warning" />} trailing={<Text size="caption">GitHub</Text>} />
+      <Activity.Compact leading={<Symbol name="exclamationmark.triangle.fill" tone="warning" label="Couldn’t load notifications" />} trailing={<Text size="caption">GitHub</Text>} />
       <Activity.Expanded>
         <Text tone="secondary">{error}</Text>
         <Row><Spacer /><Button title="Try Again" onPress={() => setAttempt((value) => value + 1)} /></Row>
       </Activity.Expanded>
     </Activity> : items ? <Activity id="notifications" title="GitHub" phase={count ? "active" : "paused"} idlePreview>
-      <Activity.Compact leading={<Symbol name={count ? "bell.badge.fill" : "bell"} tone={count ? "accent" : "secondary"} />}
+      <Activity.Compact leading={<Symbol name={count ? "bell.badge.fill" : "bell"} tone={count ? "accent" : "secondary"}
+        label={count ? "Unread notifications" : "No unread notifications"} />}
         trailing={<Text size="caption">{count === 20 ? "20+" : String(count)}</Text>} />
       {newest && newestKey !== launchKey ? <Activity.Peek id={newestKey!} text={`${newest.repository.full_name} • ${newest.subject.title}`} /> : null}
       <Activity.Expanded>

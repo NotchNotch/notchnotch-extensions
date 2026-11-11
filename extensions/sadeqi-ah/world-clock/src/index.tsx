@@ -64,7 +64,7 @@ function WorldClock() {
       <Activity.Compact leading={<Symbol name="globe" />} trailing={<Text size="caption">{clocks[0].time}</Text>} />
       <Activity.Expanded>
         {clocks.slice(0, 4).map((clock) => <Row key={clock.city}>
-          <Symbol name={clock.night ? "moon.fill" : "sun.max.fill"} size="caption" tone="secondary" />
+          <Symbol name={clock.night ? "moon.fill" : "sun.max.fill"} size="caption" tone="secondary" label={clock.night ? "Night" : "Day"} />
           <Text>{clock.city}</Text>
           <Text size="caption" tone="secondary">{clock.detail}</Text>
           <Spacer />

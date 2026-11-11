@@ -51,7 +51,7 @@ function HackerNews() {
 
   const item = (story: Story) => <ListItem key={story.id} title={story.title}
     subtitle={`${story.score} points · ${story.descendants ?? 0} comments`} onPress={() => open(story.url ?? discussion(story))}>
-    <Button icon="bubble.left" onPress={() => open(discussion(story))} />
+    <Button icon="bubble.left" label="Comments" onPress={() => open(discussion(story))} />
   </ListItem>;
   const name = lists.find((option) => option.value === list)!.label;
 
