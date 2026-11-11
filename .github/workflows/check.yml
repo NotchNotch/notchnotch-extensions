@@ -1,8 +1,9 @@
 name: Check
 
+# Runs on every pull request, not only ones that touch extensions: main
+# requires this check, and a check that never starts would block the merge.
 on:
   pull_request:
-    paths: ["extensions/**", "scripts/**", "tests/**", ".github/workflows/**"]
 
 permissions:
   contents: read
