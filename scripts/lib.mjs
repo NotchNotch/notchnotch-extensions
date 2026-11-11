@@ -157,7 +157,7 @@ export function rehome(entry, current = repository) {
   const move = (url) => typeof url === "string" ? url.replace(pattern, (_, host) => `https://${host}/${current}/`) : url;
   const copy = structuredClone(entry);
   copy.package.url = move(copy.package.url);
-  for (const key of ["icon", "iconDark", "readme", "changelog"]) if (copy[key]) copy[key] = move(copy[key]);
+  for (const key of ["icon", "readme", "changelog"]) if (copy[key]) copy[key] = move(copy[key]);
   if (copy.screenshots) copy.screenshots = copy.screenshots.map(move);
   return copy;
 }

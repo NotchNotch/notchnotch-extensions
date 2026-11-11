@@ -1,6 +1,6 @@
 // Draws a Store icon in the macOS 26 format: an SF Symbol in white glass on a colored squircle,
-// with the shadow and edge light of Apple's own app icons. Writes icon.png (light) and
-// icon@dark.png, both 512 × 512, matching the NotchNotch Extension Icon Template in Figma.
+// with the shadow and edge light of Apple's own app icons. Writes icon.png, 512 × 512,
+// matching the NotchNotch Extension Icon Template in Figma. One icon serves light and dark mode.
 //
 //   swift scripts/make-icon.swift <sf symbol> <color> <assets folder>
 //
@@ -11,7 +11,7 @@ import CoreImage
 
 // MARK: - Inputs
 
-struct Tint { let top: CGColor; let bottom: CGColor; let darkGlyph: CGColor }
+struct Tint { let top: CGColor; let bottom: CGColor }
 
 func color(_ hex: Int, _ alpha: CGFloat = 1) -> CGColor {
     CGColor(srgbRed: CGFloat((hex >> 16) & 0xFF) / 255, green: CGFloat((hex >> 8) & 0xFF) / 255,
@@ -24,20 +24,18 @@ func mix(_ hex: Int, with target: CGFloat, _ amount: CGFloat) -> CGColor {
                    blue: c[2] + (target - c[2]) * amount, alpha: 1)
 }
 
-// The seven tile colors of the template: (top, bottom, glyph on the dark tile).
-let palette: [String: (Int, Int, Int)] = [
-    "blue": (0x00D3FE, 0x0363BC, 0x3FDCFF), "green": (0x83FDAF, 0x21898A, 0x83FDAF),
-    "yellow": (0xFDDD38, 0xB67700, 0xFDDD38), "red": (0xFF6363, 0xD72A2A, 0xFF7A7A),
-    "pink": (0xF672E1, 0xBE3FEC, 0xF672E1), "purple": (0xAE55F4, 0x6A18BC, 0xBE7BF7),
-    "graphite": (0x686C73, 0x1A1F23, 0xC9CDD2),
+// The seven tile colors of the template: (top, bottom).
+let palette: [String: (Int, Int)] = [
+    "blue": (0x00D3FE, 0x0363BC), "green": (0x83FDAF, 0x21898A),
+    "yellow": (0xFDDD38, 0xB67700), "red": (0xFF6363, 0xD72A2A),
+    "pink": (0xF672E1, 0xBE3FEC), "purple": (0xAE55F4, 0x6A18BC),
+    "graphite": (0x686C73, 0x1A1F23),
 ]
 
 func tint(named name: String) -> Tint? {
-    if let (top, bottom, glyph) = palette[name.lowercased()] {
-        return Tint(top: color(top), bottom: color(bottom), darkGlyph: color(glyph))
-    }
+    if let (top, bottom) = palette[name.lowercased()] { return Tint(top: color(top), bottom: color(bottom)) }
     guard let hex = Int(name.trimmingCharacters(in: CharacterSet(charactersIn: "#")), radix: 16) else { return nil }
-    return Tint(top: mix(hex, with: 1, 0.2), bottom: mix(hex, with: 0, 0.25), darkGlyph: mix(hex, with: 1, 0.2))
+    return Tint(top: mix(hex, with: 1, 0.2), bottom: mix(hex, with: 0, 0.25))
 }
 
 let arguments = CommandLine.arguments
@@ -139,7 +137,7 @@ func over(_ layers: [CIImage]) -> CIImage {
 
 // MARK: - Icon
 
-func draw(dark: Bool) -> CGImage {
+func draw() -> CGImage {
     let white = CGColor(srgbRed: 1, green: 1, blue: 1, alpha: 1)
 
     // Body: vertical gradient, with the system drop shadow (21% black, 5 px down, blur 18).
@@ -147,25 +145,24 @@ func draw(dark: Bool) -> CGImage {
         context.saveGState()
         context.setShadow(offset: CGSize(width: 0, height: -5), blur: 18, color: CGColor(gray: 0, alpha: 0.21))
         context.addPath(bodyPath)
-        context.setFillColor(dark ? color(0x141518) : tint.bottom)
+        context.setFillColor(tint.bottom)
         context.fillPath()
         context.restoreGState()
         context.addPath(bodyPath)
         context.clip()
-        let colors = dark ? [color(0x3A3B3F), color(0x141518)] : [tint.top, tint.bottom]
+        let colors = [tint.top, tint.bottom]
         context.drawLinearGradient(CGGradient(colorsSpace: sRGB, colors: colors as CFArray, locations: [0, 1])!,
                                    start: CGPoint(x: 0, y: bodyRect.maxY), end: CGPoint(x: 0, y: bodyRect.minY), options: [])
     }
 
     // Edge light: a 9 px stroke along the body edge, blurred and kept inside the body.
     // 53% white at the top and sides, half of that at the bottom.
-    let strength: CGFloat = dark ? 0.6 : 1
     let stroke = layer { context in
         context.addPath(bodyPath)
         context.setLineWidth(9)
         context.replacePathWithStrokedPath()
         context.clip()
-        let colors = [0.53, 0.53, 0.265].map { CGColor(srgbRed: 1, green: 1, blue: 1, alpha: $0 * strength) }
+        let colors = [0.53, 0.53, 0.265].map { CGColor(srgbRed: 1, green: 1, blue: 1, alpha: $0) }
         // The stroke reaches 4.5 px past the body, so let the gradient run on past both ends.
         context.drawLinearGradient(CGGradient(colorsSpace: sRGB, colors: colors as CFArray, locations: [0, 0.45, 1])!,
                                    start: CGPoint(x: 0, y: bodyRect.maxY), end: CGPoint(x: 0, y: bodyRect.minY),
@@ -191,9 +188,8 @@ func draw(dark: Bool) -> CGImage {
         NSGraphicsContext.restoreGraphicsState()
     })
 
-    // White glass, 88% at the top to 60% at the bottom. On the dark tile, the tile's color instead.
-    let glass = dark ? [tint.darkGlyph, tint.darkGlyph.copy(alpha: 0.85)!] : [white.copy(alpha: 0.88)!, white.copy(alpha: 0.6)!]
-    let fill = gradient(glass[0], glass[1], over: glyphRect, in: glyphMask)
+    // White glass, 88% at the top to 60% at the bottom.
+    let fill = gradient(white.copy(alpha: 0.88)!, white.copy(alpha: 0.6)!, over: glyphRect, in: glyphMask)
     // Contact shadow: 28% black, 3 px down, blur 7. Only outside the glyph, so it never shows through the glass.
     let shadow = blurred(painted(glyphMask, CGColor(gray: 0, alpha: 1), alpha: 0.28), sigma: 3.5)
         .transformed(by: CGAffineTransform(translationX: 0, y: -3))
@@ -211,8 +207,6 @@ func draw(dark: Bool) -> CGImage {
     return render(over([CIImage(cgImage: body), rim, shadow, fill, innerLight, edge]))
 }
 
-for (dark, name) in [(false, "icon.png"), (true, "icon@dark.png")] {
-    let png = NSBitmapImageRep(cgImage: draw(dark: dark)).representation(using: .png, properties: [:])!
-    try png.write(to: folder.appendingPathComponent(name))
-}
-print("Wrote \(folder.path)/icon.png and icon@dark.png")
+let png = NSBitmapImageRep(cgImage: draw()).representation(using: .png, properties: [:])!
+try png.write(to: folder.appendingPathComponent("icon.png"))
+print("Wrote \(folder.path)/icon.png")

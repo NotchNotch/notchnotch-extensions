@@ -1,7 +1,7 @@
 {
   "id": "dev.notchnotch.crypto-prices",
   "name": "Crypto Prices",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "apiVersion": 1,
   "entry": "bundle.js",
   "permissions": [],

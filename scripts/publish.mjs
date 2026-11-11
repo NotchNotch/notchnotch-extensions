@@ -51,11 +51,7 @@ for (const handle of await listHandles()) {
     else run("gh", ["release", "upload", tag, file, "--repo", repository, "--clobber"]);
   }
   const entry = { handle, manifest, package: { url, sha256: sha256(bytes), size: bytes.length } };
-  if (typeof manifest.icon === "string" && manifest.icon.endsWith(".png")) {
-    entry.icon = raw(handle, `assets/${manifest.icon}`);
-    const dark = manifest.icon.replace(/\.png$/, "@dark.png");
-    if (await exists(path.join(folderOf(handle), "assets", dark))) entry.iconDark = raw(handle, `assets/${dark}`);
-  }
+  if (typeof manifest.icon === "string" && manifest.icon.endsWith(".png")) entry.icon = raw(handle, `assets/${manifest.icon}`);
   const screenshots = (await readdir(path.join(folderOf(handle), "metadata")).catch(() => []))
     .filter((name) => name.endsWith(".png")).sort().slice(0, maximumScreenshots);
   if (screenshots.length) entry.screenshots = screenshots.map((name) => raw(handle, `metadata/${name}`));
