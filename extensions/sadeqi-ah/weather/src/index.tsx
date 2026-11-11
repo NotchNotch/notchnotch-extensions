@@ -98,7 +98,7 @@ function WeatherExtension() {
     </Settings>
 
     {weather && now ? <Activity id="weather" title="Weather" phase={besideNotch ? "active" : "paused"} idlePreview>
-      <Activity.Compact leading={<Symbol name={now.symbol} />} trailing={<Text size="caption">{degrees(weather.temperature)}</Text>} />
+      <Activity.Compact leading={<Symbol name={now.symbol} label={now.label} />} trailing={<Text size="caption">{degrees(weather.temperature)}</Text>} />
       <Activity.Expanded>
         <Row spacing="tight">
           <Symbol name="location.fill" size="caption" tone="secondary" />
@@ -115,7 +115,7 @@ function WeatherExtension() {
         <Text size="caption" tone="secondary">{`Feels like ${degrees(weather.feelsLike)} · Wind ${speed(weather.wind)}`}</Text>
       </Activity.Expanded>
     </Activity> : error ? <Activity id="weather" title="Weather" phase="paused" idlePreview>
-      <Activity.Compact leading={<Symbol name="exclamationmark.triangle.fill" tone="warning" />} trailing={<Text size="caption">--°</Text>} />
+      <Activity.Compact leading={<Symbol name="exclamationmark.triangle.fill" tone="warning" label="Weather unavailable" />} trailing={<Text size="caption">--°</Text>} />
       <Activity.Expanded>
         <Text tone="secondary">{error}</Text>
         <Row><Spacer />{retry}</Row>

@@ -12,12 +12,12 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@notchnotch/runtime": "^0.6.0",
-    "@notchnotch/sdk": "^0.6.0",
+    "@notchnotch/runtime": "^0.8.0",
+    "@notchnotch/sdk": "^0.8.0",
     "react": "19.3.1"
   },
   "devDependencies": {
-    "@notchnotch/cli": "^0.6.0",
+    "@notchnotch/cli": "^0.8.0",
     "@types/react": "19.3.0",
     "typescript": "5.9.3"
   }

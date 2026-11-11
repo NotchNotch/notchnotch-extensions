@@ -67,7 +67,8 @@ function CryptoPrices() {
     </Settings>
 
     {prices && first ? <Activity id="prices" title="Crypto Prices" phase={besideNotch ? "active" : "paused"} idlePreview>
-      <Activity.Compact leading={<Symbol name="bitcoinsign.circle.fill" tone={first.change >= 0 ? "success" : "danger"} />}
+      <Activity.Compact leading={<Symbol name="bitcoinsign.circle.fill" tone={first.change >= 0 ? "success" : "danger"}
+        label={`${title(first.id)} ${first.change >= 0 ? "up" : "down"}`} />}
         trailing={<Text size="caption">{money(first.price, true)}</Text>} />
       <Activity.Expanded>
         {prices.slice(0, 4).map((price) => <Row key={price.id}>

@@ -51,7 +51,7 @@ function MoonPhase() {
     </Settings>
 
     <Activity id="moon" title="Moon Phase" phase="paused" idlePreview>
-      <Activity.Compact leading={<Symbol name={today.phase.symbol} />} trailing={<Text size="caption">{lit}</Text>} />
+      <Activity.Compact leading={<Symbol name={today.phase.symbol} label={today.phase.name} />} trailing={<Text size="caption">{lit}</Text>} />
       {fullTonight ? <Activity.Peek id={`full-${today.nextFull.toDateString()}`} text="Full moon tonight" /> : null}
       <Activity.Expanded>
         <Row>
