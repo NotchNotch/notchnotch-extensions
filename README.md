@@ -1,6 +1,6 @@
 # NotchNotch Extensions
 
-The source of every extension in the [NotchNotch](https://github.com/sadeqi-ah/notchnotch) Store.
+The source of every extension in the [NotchNotch](https://github.com/NotchNotch/notchnotch) Store.
 
 Each extension lives in `extensions/<author>/<name>/` as source only: no built
 bundles or binaries are committed. After a pull request is reviewed and merged,
@@ -14,13 +14,13 @@ Anyone can submit an extension. Everyone here follows the
 ## Adding an extension
 
 1. Build and test it locally with `notchnotch dev`. See the
-   [extension docs](https://github.com/sadeqi-ah/notchnotch/tree/main/docs/extensions).
+   [extension docs](https://github.com/NotchNotch/notchnotch/tree/main/docs/extensions).
 2. Set the manifest's `author` to your GitHub user name, add a `README.md`, a
    `CHANGELOG.md` and screenshots made with `notchnotch screenshot`.
 3. Run `npx notchnotch publish`. It runs the same checks as CI, copies your
    source to a fork of this repository and opens the pull request. Run it
    again after changes to update it. See
-   [Publish to the Store](https://github.com/sadeqi-ah/notchnotch/blob/main/docs/extensions/publishing.md#publish-to-the-store).
+   [Publish to the Store](https://github.com/NotchNotch/notchnotch/blob/main/docs/extensions/publishing.md#publish-to-the-store).
 
 You can also open the pull request by hand, adding `extensions/<author>/<name>/`.
 A maintainer reviews it, usually within a week. Your first pull request is
@@ -28,7 +28,7 @@ labeled `new author`, and once it's merged you're listed in `CODEOWNERS` for
 your folder, so you're asked to review anyone else's change to your extensions.
 
 Questions and ideas go to
-[Discussions](https://github.com/sadeqi-ah/notchnotch/discussions); problems
+[Discussions](https://github.com/NotchNotch/notchnotch/discussions); problems
 with an extension go to this repository's issues.
 
 ## What CI checks
@@ -105,7 +105,7 @@ When a pull request is merged, the **Publish** workflow:
 
 It also re-signs the catalog every week, because NotchNotch rejects one older
 than 30 days. The format is described in
-[the NotchNotch docs](https://github.com/sadeqi-ah/notchnotch/blob/main/docs/internals/store-catalog.md).
+[the NotchNotch docs](https://github.com/NotchNotch/notchnotch/blob/main/docs/internals/store-catalog.md).
 
 ## License
 
