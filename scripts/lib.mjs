@@ -144,3 +144,4 @@ export function releaseNames(handle, version) {
   const [author, name] = handle.split("/");
   return { tag: `${author}.${name}@${version}`, asset: `${name}-${version}.notchext` };
 }
+
