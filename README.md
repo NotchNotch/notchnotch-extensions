@@ -69,6 +69,17 @@ review starts from the right questions:
 It runs from the base branch and reads only the pull request's file list, so
 it never runs code from the pull request.
 
+## Merging
+
+`main` is protected: every change arrives as a pull request, the **Check**
+workflow must pass, a code owner must approve, and review conversations must be
+resolved. Pushing new commits dismisses earlier approvals. Nobody can force-push
+to or delete `main`.
+
+Merging to `main` is what publishes to the Store, so these rules are the
+Store's review. The `catalog` branch isn't protected the same way: the app
+accepts only a catalog signed with the key in `catalog-public-key`.
+
 ## How publishing works
 
 When a pull request is merged, the **Publish** workflow:
