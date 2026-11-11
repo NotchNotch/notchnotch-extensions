@@ -1,6 +1,6 @@
 # NotchNotch Extensions
 
-The source of every extension in the [NotchNotch](https://github.com/NotchNotch/notchnotch) Store.
+The source of every extension in the [NotchNotch](https://github.com/NotchNotch/notchnotch) Store. Browse them at [notchnotch.github.io/store](https://notchnotch.github.io/store/).
 
 Each extension lives in `extensions/<author>/<name>/` as source only: no built
 bundles or binaries are committed. After a pull request is reviewed and merged,
