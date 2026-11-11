@@ -3,7 +3,8 @@ name: Publish
 on:
   push:
     branches: [main]
-    paths: ["extensions/**"]
+    # Also when the publishing scripts change: they shape every catalog entry.
+    paths: ["extensions/**", "scripts/**", "catalog-public-key"]
   schedule:
     # Re-sign weekly so the catalog never expires (it is valid for 30 days).
     - cron: "17 4 * * 1"
