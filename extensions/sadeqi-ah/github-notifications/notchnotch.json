@@ -1,7 +1,7 @@
 {
   "id": "dev.notchnotch.github-notifications",
   "name": "GitHub Notifications",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "apiVersion": 1,
   "entry": "bundle.js",
   "permissions": [],

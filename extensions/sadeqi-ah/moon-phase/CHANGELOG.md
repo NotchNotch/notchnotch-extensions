@@ -1,5 +1,9 @@
 # Moon Phase Changelog
 
+## [1.0.3]
+
+- One icon for light and dark mode; the dark variant is gone.
+
 ## [1.0.2]
 
 - A new Store icon in the macOS 26 style.
