@@ -11,7 +11,7 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { parseArgs } from "node:util";
 import {
-  attempt, catalogLifetimeDays, folderOf, listHandles, maximumScreenshots, minimumAppVersion, publishedCatalog, readManifest,
+  attempt, catalogLifetimeDays, folderOf, listHandles, maximumScreenshots, minimumAppVersionFor, publishedCatalog, readManifest,
   rehome, releaseNames, repository, root, run, sha256, signBytes, verifyBytes,
 } from "./lib.mjs";
 
@@ -58,7 +58,7 @@ for (const handle of await listHandles()) {
   for (const [key, file] of [["readme", "README.md"], ["changelog", "CHANGELOG.md"]]) {
     if (await exists(path.join(folderOf(handle), file))) entry[key] = raw(handle, file);
   }
-  entry.minimumAppVersion = minimumAppVersion;
+  entry.minimumAppVersion = minimumAppVersionFor(manifest);
   entry.published = now.toISOString().replace(/\.\d+Z$/, "Z");
   extensions.push(entry);
   console.log(`▸ ${handle} ${manifest.version} released`);

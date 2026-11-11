@@ -11,6 +11,14 @@ export const repository = process.env.GITHUB_REPOSITORY || "NotchNotch/notchnotc
 export const extensionsDirectory = path.join(root, "extensions");
 /** The first NotchNotch with the Store. Raise it when the catalog needs a newer app. */
 export const minimumAppVersion = "0.7.0";
+/** The first NotchNotch that serves each system capability, by permission name. */
+export const capabilityAppVersions = { calendar: "0.9.0", "now-playing": "0.9.0" };
+
+/** The oldest app that can run this manifest: the Store's, or newer for a capability it uses. */
+export function minimumAppVersionFor(manifest) {
+  return (manifest.permissions ?? []).map((name) => capabilityAppVersions[name]).filter(Boolean)
+    .reduce((highest, version) => compareVersions(version, highest) > 0 ? version : highest, minimumAppVersion);
+}
 export const catalogLifetimeDays = 30;
 export const maximumScreenshots = 6;
 
