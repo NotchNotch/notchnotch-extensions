@@ -1,0 +1,51 @@
+{
+  "id": "dev.notchnotch.battery",
+  "name": "Battery",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "bundle.js",
+  "permissions": [
+    "battery"
+  ],
+  "icon": "icon.png",
+  "accent": "green",
+  "description": "Your battery in the notch: a ring while it charges, and a heads-up when it runs low.",
+  "categories": [
+    "System"
+  ],
+  "license": "MIT",
+  "author": "sadeqi-ah",
+  "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/battery",
+  "preferences": [
+    {
+      "name": "lowLevel",
+      "type": "dropdown",
+      "title": "Show when the battery is below",
+      "default": "20",
+      "options": [
+        {
+          "value": "10",
+          "title": "10%"
+        },
+        {
+          "value": "20",
+          "title": "20%"
+        },
+        {
+          "value": "30",
+          "title": "30%"
+        },
+        {
+          "value": "off",
+          "title": "Never"
+        }
+      ]
+    },
+    {
+      "name": "whileCharging",
+      "type": "toggle",
+      "title": "Show while charging",
+      "default": true
+    }
+  ]
+}
