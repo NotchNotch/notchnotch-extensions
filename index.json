@@ -1,9 +1,73 @@
 {
   "format": 1,
-  "sequence": 12,
-  "generated": "2026-11-12T22:45:23Z",
-  "expires": "2026-12-12T22:45:23Z",
+  "sequence": 13,
+  "generated": "2026-11-12T22:45:54Z",
+  "expires": "2026-12-12T22:45:54Z",
   "extensions": [
+    {
+      "handle": "sadeqi-ah/battery",
+      "manifest": {
+        "id": "dev.notchnotch.battery",
+        "name": "Battery",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [
+          "battery"
+        ],
+        "icon": "icon.png",
+        "accent": "green",
+        "description": "Your battery in the notch: a ring while it charges, and a heads-up when it runs low.",
+        "categories": [
+          "System"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/battery",
+        "preferences": [
+          {
+            "name": "lowLevel",
+            "type": "dropdown",
+            "title": "Show when the battery is below",
+            "default": "20",
+            "options": [
+              {
+                "value": "10",
+                "title": "10%"
+              },
+              {
+                "value": "20",
+                "title": "20%"
+              },
+              {
+                "value": "30",
+                "title": "30%"
+              },
+              {
+                "value": "off",
+                "title": "Never"
+              }
+            ]
+          },
+          {
+            "name": "whileCharging",
+            "type": "toggle",
+            "title": "Show while charging",
+            "default": true
+          }
+        ]
+      },
+      "package": {
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.battery%401.0.0/battery-1.0.0.notchext",
+        "sha256": "feab6d9366b5b66396f5178ebebc8ac8b258052908778689901956deb8138e64",
+        "size": 342315
+      },
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/8a629a1e59b5331736869da9943ac620e4e3de62/extensions/sadeqi-ah/battery/assets/icon.png",
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/8a629a1e59b5331736869da9943ac620e4e3de62/extensions/sadeqi-ah/battery/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/8a629a1e59b5331736869da9943ac620e4e3de62/extensions/sadeqi-ah/battery/CHANGELOG.md",
+      "minimumAppVersion": "0.11.0",
+      "published": "2026-11-12T22:45:54Z"
+    },
     {
       "handle": "sadeqi-ah/break-reminder",
       "manifest": {
