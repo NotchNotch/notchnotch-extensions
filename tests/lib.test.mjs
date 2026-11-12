@@ -49,4 +49,10 @@ test("an extension that uses a capability needs the app that first served it", a
   assert.equal(minimumAppVersionFor({ permissions: [] }), minimumAppVersion);
   assert.equal(minimumAppVersionFor({ permissions: ["calendar"] }), "0.9.0");
   assert.equal(minimumAppVersionFor({ permissions: ["local-network", "now-playing"] }), "0.9.0");
+  assert.equal(minimumAppVersionFor({ permissions: ["battery"] }), "0.11.0");
+  // Components come from the bundle. The renderer's own list of node types names them too, so only calls count.
+  const renderer = 'const nodeTypes = new Set(["column", "row", "text", "value", "ring"]);';
+  assert.equal(minimumAppVersionFor({ permissions: [] }, renderer), minimumAppVersion);
+  assert.equal(minimumAppVersionFor({ permissions: [] }, renderer + '(0, import_react2.createElement)("ring", { value })'), "0.11.0");
+  assert.equal(minimumAppVersionFor({ permissions: ["calendar"] }, 'React.createElement("value", { unit })'), "0.11.0");
 });

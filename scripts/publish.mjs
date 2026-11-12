@@ -58,7 +58,7 @@ for (const handle of await listHandles()) {
   for (const [key, file] of [["readme", "README.md"], ["changelog", "CHANGELOG.md"]]) {
     if (await exists(path.join(folderOf(handle), file))) entry[key] = raw(handle, file);
   }
-  entry.minimumAppVersion = minimumAppVersionFor(manifest);
+  entry.minimumAppVersion = minimumAppVersionFor(manifest, run("unzip", ["-p", file, "bundle.js"], { capture: true }));
   entry.published = now.toISOString().replace(/\.\d+Z$/, "Z");
   extensions.push(entry);
   console.log(`▸ ${handle} ${manifest.version} released`);

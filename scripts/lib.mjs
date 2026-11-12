@@ -12,11 +12,23 @@ export const extensionsDirectory = path.join(root, "extensions");
 /** The first NotchNotch with the Store. Raise it when the catalog needs a newer app. */
 export const minimumAppVersion = "0.7.0";
 /** The first NotchNotch that serves each system capability, by permission name. */
-export const capabilityAppVersions = { calendar: "0.9.0", "now-playing": "0.9.0" };
+export const capabilityAppVersions = { calendar: "0.9.0", "now-playing": "0.9.0", battery: "0.11.0", system: "0.11.0" };
+/**
+ * The first NotchNotch that draws each component, by node type. An older app
+ * rejects a whole snapshot with a node type it doesn't know (0.11 and later
+ * leave it out instead).
+ */
+export const componentAppVersions = { value: "0.11.0", ring: "0.11.0" };
 
-/** The oldest app that can run this manifest: the Store's, or newer for a capability it uses. */
-export function minimumAppVersionFor(manifest) {
-  return (manifest.permissions ?? []).map((name) => capabilityAppVersions[name]).filter(Boolean)
+/** Node types an extension's bundle creates. The SDK's components call createElement("<type>", …). */
+export function componentsIn(bundle) {
+  return new Set([...bundle.matchAll(/createElement\)?\(\s*"([A-Za-z]+)"/g)].map((match) => match[1]));
+}
+
+/** The oldest app that can run this package: the Store's, or newer for a capability or component it uses. */
+export function minimumAppVersionFor(manifest, bundle = "") {
+  const components = [...componentsIn(bundle)].map((type) => componentAppVersions[type]);
+  return [...(manifest.permissions ?? []).map((name) => capabilityAppVersions[name]), ...components].filter(Boolean)
     .reduce((highest, version) => compareVersions(version, highest) > 0 ? version : highest, minimumAppVersion);
 }
 export const catalogLifetimeDays = 30;
