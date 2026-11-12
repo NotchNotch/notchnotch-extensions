@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "sequence": 11,
-  "generated": "2026-11-12T22:44:56Z",
-  "expires": "2026-12-12T22:44:56Z",
+  "sequence": 12,
+  "generated": "2026-11-12T22:45:23Z",
+  "expires": "2026-12-12T22:45:23Z",
   "extensions": [
     {
       "handle": "sadeqi-ah/break-reminder",
@@ -406,6 +406,46 @@
       "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/service-status/CHANGELOG.md",
       "minimumAppVersion": "0.7.0",
       "published": "2026-11-12T17:19:47Z"
+    },
+    {
+      "handle": "sadeqi-ah/system-monitor",
+      "manifest": {
+        "id": "dev.notchnotch.system-monitor",
+        "name": "System Monitor",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [
+          "system"
+        ],
+        "icon": "icon.png",
+        "accent": "cyan",
+        "description": "CPU, memory, disk and network at a glance, and a heads-up when your Mac is working hard.",
+        "categories": [
+          "System"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/system-monitor",
+        "preferences": [
+          {
+            "name": "busyAlert",
+            "type": "toggle",
+            "title": "Show in the notch when the Mac is busy",
+            "default": true
+          }
+        ]
+      },
+      "package": {
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.system-monitor%401.0.0/system-monitor-1.0.0.notchext",
+        "sha256": "60133c5f1866442ac63fb56b35fff9934a4f77332e203ac265bde132301ae161",
+        "size": 370797
+      },
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/4e6e24d3b1716a159b6bae0f50504e6479e68f9c/extensions/sadeqi-ah/system-monitor/assets/icon.png",
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/4e6e24d3b1716a159b6bae0f50504e6479e68f9c/extensions/sadeqi-ah/system-monitor/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/4e6e24d3b1716a159b6bae0f50504e6479e68f9c/extensions/sadeqi-ah/system-monitor/CHANGELOG.md",
+      "minimumAppVersion": "0.11.0",
+      "published": "2026-11-12T22:45:23Z"
     },
     {
       "handle": "sadeqi-ah/weather",
