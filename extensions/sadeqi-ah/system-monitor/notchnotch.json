@@ -1,0 +1,27 @@
+{
+  "id": "dev.notchnotch.system-monitor",
+  "name": "System Monitor",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "bundle.js",
+  "permissions": [
+    "system"
+  ],
+  "icon": "icon.png",
+  "accent": "cyan",
+  "description": "CPU, memory, disk and network at a glance, and a heads-up when your Mac is working hard.",
+  "categories": [
+    "System"
+  ],
+  "license": "MIT",
+  "author": "sadeqi-ah",
+  "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/system-monitor",
+  "preferences": [
+    {
+      "name": "busyAlert",
+      "type": "toggle",
+      "title": "Show in the notch when the Mac is busy",
+      "default": true
+    }
+  ]
+}
