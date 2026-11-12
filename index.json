@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "sequence": 10,
-  "generated": "2026-11-12T17:19:47Z",
-  "expires": "2026-12-12T17:19:47Z",
+  "sequence": 11,
+  "generated": "2026-11-12T22:44:56Z",
+  "expires": "2026-12-12T22:44:56Z",
   "extensions": [
     {
       "handle": "sadeqi-ah/break-reminder",
@@ -215,7 +215,7 @@
       "manifest": {
         "id": "dev.notchnotch.focus-timer",
         "name": "Focus Timer",
-        "version": "1.0.4",
+        "version": "1.0.5",
         "apiVersion": 1,
         "entry": "bundle.js",
         "permissions": [],
@@ -230,18 +230,18 @@
         "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/focus-timer"
       },
       "package": {
-        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.focus-timer%401.0.4/focus-timer-1.0.4.notchext",
-        "sha256": "a695ba428273edc7b9775868648a606cbfede6cb395aba748a031a0bc0ce49b6",
-        "size": 342285
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.focus-timer%401.0.5/focus-timer-1.0.5.notchext",
+        "sha256": "26b11809cea2c458a0a94b2d3be19b0d4a05c86246babbd72746d90030b99ad0",
+        "size": 342717
       },
-      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/focus-timer/assets/icon.png",
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/ccbbadc96dc97622427220e72c0558d345c9779c/extensions/sadeqi-ah/focus-timer/assets/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/focus-timer/metadata/1.png"
+        "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/ccbbadc96dc97622427220e72c0558d345c9779c/extensions/sadeqi-ah/focus-timer/metadata/1.png"
       ],
-      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/focus-timer/README.md",
-      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/focus-timer/CHANGELOG.md",
-      "minimumAppVersion": "0.7.0",
-      "published": "2026-11-12T17:19:47Z"
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/ccbbadc96dc97622427220e72c0558d345c9779c/extensions/sadeqi-ah/focus-timer/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/ccbbadc96dc97622427220e72c0558d345c9779c/extensions/sadeqi-ah/focus-timer/CHANGELOG.md",
+      "minimumAppVersion": "0.11.0",
+      "published": "2026-11-12T22:44:56Z"
     },
     {
       "handle": "sadeqi-ah/github-notifications",
