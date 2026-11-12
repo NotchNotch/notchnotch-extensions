@@ -80,7 +80,7 @@ function WordOfTheDay() {
       <Activity.Peek id={entry.date} text={`Word of the day: ${entry.word}`} />
       <Activity.Expanded>
         <Row>
-          <Text size="title">{entry.word}</Text>
+          <Text size="title" tone="accent">{entry.word}</Text>
           <Badge>{entry.partOfSpeech}</Badge>
           <Spacer />
           <Text size="caption" tone="secondary">{entry.phonetic ?? ""}</Text>

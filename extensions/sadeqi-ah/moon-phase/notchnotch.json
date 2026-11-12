@@ -1,11 +1,12 @@
 {
   "id": "dev.notchnotch.moon-phase",
   "name": "Moon Phase",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "apiVersion": 1,
   "entry": "bundle.js",
   "permissions": [],
   "icon": "icon.png",
+  "accent": "purple",
   "description": "Tonight's moon, how much of it is lit, and when the next full moon rises.",
   "categories": [
     "Fun"

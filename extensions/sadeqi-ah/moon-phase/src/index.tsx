@@ -55,12 +55,12 @@ function MoonPhase() {
       {fullTonight ? <Activity.Peek id={`full-${today.nextFull.toDateString()}`} text="Full moon tonight" /> : null}
       <Activity.Expanded>
         <Row>
-          <Symbol name={today.phase.symbol} size="title" />
+          <Symbol name={today.phase.symbol} size="title" tone="accent" />
           <Text size="title">{today.phase.name}</Text>
           <Spacer />
           <Text size="headline">{lit}</Text>
         </Row>
-        <Progress value={today.illumination} tone="secondary" />
+        <Progress value={today.illumination} />
         <Text size="caption" tone="secondary">{`Full moon ${fullTonight ? "tonight" : dayName(today.nextFull)} · New moon ${dayName(today.nextNew)}`}</Text>
       </Activity.Expanded>
     </Activity>

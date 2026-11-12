@@ -1,11 +1,12 @@
 {
   "id": "dev.notchnotch.weather",
   "name": "Weather",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "apiVersion": 1,
   "entry": "bundle.js",
   "permissions": [],
   "icon": "icon.png",
+  "accent": "cyan",
   "description": "Current conditions and today's high and low for your city.",
   "categories": [
     "Weather"
