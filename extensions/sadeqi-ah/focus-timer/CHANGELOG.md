@@ -1,5 +1,9 @@
 # Focus Timer Changelog
 
+## [1.0.5]
+
+- The session is a ring that fills as it goes, with the timer inside, and the time left reads large with "left" beside it. The wing shows a small ring too. Needs NotchNotch 0.11.
+
 ## [1.0.4]
 
 - Its own orange in the notch: the time, the progress bar and Pause. The “Running” badge is gone; “Paused” still shows. Needs NotchNotch 0.10; older versions look as before.

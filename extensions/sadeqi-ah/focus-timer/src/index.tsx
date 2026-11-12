@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {
-  Actions, Activity, Badge, Button, ListItem, Picker, Progress, Prompt, Row, Section, Settings,
-  Spacer, Symbol, Text, Toggle, useStoredState,
+  Actions, Activity, Badge, Button, Column, ListItem, Picker, Prompt, Ring, Row, Section, Settings,
+  Spacer, Symbol, Text, Toggle, Value, useStoredState,
 } from "@notchnotch/sdk";
 import { start } from "@notchnotch/runtime";
 
@@ -51,6 +51,8 @@ function FocusTimer() {
   }, [remaining, phase]);
 
   const label = phase === "break" ? "Break" : "Focus";
+  const tone = phase === "break" ? "success" : "accent";
+  const progress = Math.min(1, Math.max(0, 1 - remaining / total));
   return <>
     <Settings>
       <Section title="Session" footer="Changes apply to the next session.">
@@ -67,17 +69,20 @@ function FocusTimer() {
 
     {phase !== "idle" ? <Activity id="session" title={label} phase={paused || asking ? "paused" : "active"}>
       <Activity.Compact
-        leading={<Symbol name={phase === "break" ? "cup.and.saucer.fill" : "timer"} label={label} />}
-        trailing={<Text size="caption" tone={phase === "break" ? "success" : "accent"}>{clock(remaining)}</Text>} />
+        leading={<Ring value={progress} tone={tone} label={`${label} session`} />}
+        trailing={<Text size="caption" tone={tone}>{clock(remaining)}</Text>} />
       <Activity.Expanded>
-        <Row spacing="tight">
-          <Symbol name={phase === "break" ? "cup.and.saucer.fill" : "timer"} size="caption" tone={phase === "break" ? "success" : "accent"} />
-          <Text size="caption" tone="secondary">{label.toUpperCase()}</Text>
+        <Row spacing="loose">
+          <Ring value={progress} size="title" tone={tone} label={`${label} session`}>
+            <Symbol name={phase === "break" ? "cup.and.saucer.fill" : "timer"} tone={tone} />
+          </Ring>
+          <Column spacing="none">
+            <Text size="caption" tone="secondary">{label.toUpperCase()}</Text>
+            <Value unit="left" tone={paused ? "secondary" : tone}>{clock(remaining)}</Value>
+          </Column>
           <Spacer />
           {paused ? <Badge tone="warning">Paused</Badge> : null}
         </Row>
-        <Text size="timer" tone={paused ? "secondary" : phase === "break" ? "success" : "accent"}>{clock(remaining)}</Text>
-        <Progress value={Math.min(1, Math.max(0, 1 - remaining / total))} tone={phase === "break" ? "success" : "accent"} />
         <Actions>
           <Button icon="stop.fill" label="Stop" tone="danger" onPress={stop} />
           <Button title={paused ? "Resume" : "Pause"} icon={paused ? "play.fill" : "pause.fill"} tone="accent"
