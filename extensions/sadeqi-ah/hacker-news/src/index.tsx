@@ -68,7 +68,7 @@ function HackerNews() {
       <Activity.Compact leading={<Symbol name="newspaper.fill" />} trailing={<Text size="caption">{name}</Text>} />
       <Activity.Expanded>
         <Row spacing="tight">
-          <Symbol name="newspaper.fill" size="caption" tone="secondary" />
+          <Symbol name="newspaper.fill" size="caption" tone="accent" />
           <Text size="caption" tone="secondary">{`HACKER NEWS · ${name.toUpperCase()}`}</Text>
           <Spacer />
         </Row>

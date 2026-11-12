@@ -107,7 +107,7 @@ function WeatherExtension() {
           <Text size="caption" tone="secondary">{time(weather.updated)}</Text>
         </Row>
         <Row>
-          <Symbol name={now.symbol} size="title" />
+          <Symbol name={now.symbol} size="title" tone="accent" />
           <Text size="timer">{degrees(weather.temperature)}</Text>
           <Spacer />
           <Text tone="secondary">{`${now.label} · H ${degrees(weather.high)} L ${degrees(weather.low)}`}</Text>

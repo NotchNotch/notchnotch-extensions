@@ -1,11 +1,12 @@
 {
   "id": "dev.notchnotch.break-reminder",
   "name": "Break Reminder",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "apiVersion": 1,
   "entry": "bundle.js",
   "permissions": [],
   "icon": "icon.png",
+  "accent": "mint",
   "description": "A gentle nudge to stand up and rest your eyes at regular intervals.",
   "categories": [
     "Health"

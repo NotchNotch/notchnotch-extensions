@@ -1,11 +1,12 @@
 {
   "id": "dev.notchnotch.word-of-the-day",
   "name": "Word of the Day",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "apiVersion": 1,
   "entry": "bundle.js",
   "permissions": [],
   "icon": "icon.png",
+  "accent": "pink",
   "description": "A new English word every day, with its meaning and an example.",
   "categories": [
     "Fun"

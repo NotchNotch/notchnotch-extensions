@@ -51,7 +51,7 @@ function BreakReminder() {
       <Activity.Compact leading={<Symbol name="figure.walk" />} trailing={<Text size="caption">{`${left}m`}</Text>} />
       <Activity.Expanded>
         <Text size="caption" tone="secondary">NEXT BREAK</Text>
-        <Text size="timer">{`${left} min`}</Text>
+        <Text size="timer" tone="accent">{`${left} min`}</Text>
         <Actions>
           <Button title="Start Over" icon="arrow.counterclockwise" onPress={() => restart()} />
           <Button title="Break Now" tone="accent" onPress={() => setAsking(true)} />

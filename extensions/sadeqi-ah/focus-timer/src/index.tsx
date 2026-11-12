@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-  Actions, Activity, Badge, Button, Divider, ListItem, Picker, Progress, Prompt, Row, Section, Settings,
+  Actions, Activity, Badge, Button, ListItem, Picker, Progress, Prompt, Row, Section, Settings,
   Spacer, Symbol, Text, Toggle, useStoredState,
 } from "@notchnotch/sdk";
 import { start } from "@notchnotch/runtime";
@@ -68,17 +68,16 @@ function FocusTimer() {
     {phase !== "idle" ? <Activity id="session" title={label} phase={paused || asking ? "paused" : "active"}>
       <Activity.Compact
         leading={<Symbol name={phase === "break" ? "cup.and.saucer.fill" : "timer"} label={label} />}
-        trailing={<Text size="caption">{clock(remaining)}</Text>} />
+        trailing={<Text size="caption" tone={phase === "break" ? "success" : "accent"}>{clock(remaining)}</Text>} />
       <Activity.Expanded>
         <Row spacing="tight">
-          <Symbol name={phase === "break" ? "cup.and.saucer.fill" : "timer"} size="caption" tone="secondary" />
+          <Symbol name={phase === "break" ? "cup.and.saucer.fill" : "timer"} size="caption" tone={phase === "break" ? "success" : "accent"} />
           <Text size="caption" tone="secondary">{label.toUpperCase()}</Text>
           <Spacer />
-          <Badge tone={paused ? "warning" : "success"}>{paused ? "Paused" : "Running"}</Badge>
+          {paused ? <Badge tone="warning">Paused</Badge> : null}
         </Row>
-        <Text size="timer">{clock(remaining)}</Text>
+        <Text size="timer" tone={paused ? "secondary" : phase === "break" ? "success" : "accent"}>{clock(remaining)}</Text>
         <Progress value={Math.min(1, Math.max(0, 1 - remaining / total))} tone={phase === "break" ? "success" : "accent"} />
-        <Divider />
         <Actions>
           <Button icon="stop.fill" label="Stop" tone="danger" onPress={stop} />
           <Button title={paused ? "Resume" : "Pause"} icon={paused ? "play.fill" : "pause.fill"} tone="accent"

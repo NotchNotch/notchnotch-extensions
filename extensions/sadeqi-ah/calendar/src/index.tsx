@@ -165,7 +165,7 @@ function Calendar() {
         {event.location && !event.location.startsWith("https://")
           ? <Row spacing="tight"><Symbol name="mappin.and.ellipse" size="caption" tone="secondary" /><Text tone="secondary">{event.location.slice(0, 160)}</Text></Row>
           : null}
-        {ongoing ? <Progress value={Math.max(0, Math.min(1, (now - event.start) / (event.end - event.start)))} tone="success" /> : null}
+        {ongoing ? <Progress value={Math.max(0, Math.min(1, (now - event.start) / (event.end - event.start)))} /> : null}
         <Row spacing="regular">
           {event.meetingURL ? <Button title="Join" icon="video.fill" tone="accent" disabled={busy}
             onPress={() => { void request("calendar/join", { id: event.id }); }} /> : null}

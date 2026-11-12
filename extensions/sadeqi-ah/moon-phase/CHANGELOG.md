@@ -1,5 +1,9 @@
 # Moon Phase Changelog
 
+## [1.0.4]
+
+- Its own purple in the notch, for the moon and its illumination bar. Needs NotchNotch 0.10; older versions look as before.
+
 ## [1.0.3]
 
 - One icon for light and dark mode; the dark variant is gone.

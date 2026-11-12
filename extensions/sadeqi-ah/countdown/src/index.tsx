@@ -64,7 +64,7 @@ function Countdown() {
           <Spacer />
           <Text size="caption" tone="secondary">{left.done ? "" : left.detail}</Text>
         </Row>
-        <Text size="timer">{left.done ? "It’s here" : left.long}</Text>
+        <Text size="timer" tone="accent">{left.done ? "It’s here" : left.long}</Text>
         <Text size="caption" tone="secondary">{when}</Text>
       </Activity.Expanded>
     </Activity>
