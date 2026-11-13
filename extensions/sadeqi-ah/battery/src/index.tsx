@@ -80,6 +80,16 @@ function Battery() {
       <Activity.Compact
         leading={<Ring value={battery.level ?? 0} tone={tone} label="Battery" />}
         trailing={<Text size="caption" tone={tone}>{`${percent}%`}</Text>} />
+      {/* Wide with the ring while it's worth watching; a small reading otherwise. */}
+      <Activity.Tile size={active ? "wide" : "small"}>
+        {active ? <Ring value={battery.level ?? 0} tone={tone} label="Battery">
+          <Symbol name={symbol} tone={tone} />
+        </Ring> : null}
+        <Column spacing="none">
+          <Text size="caption" tone="secondary">{state.toUpperCase()}</Text>
+          <Value unit="%" tone={tone}>{percent}</Value>
+        </Column>
+      </Activity.Tile>
       {moment ? <Activity.Peek id={moment.id} text={moment.text} /> : null}
       <Activity.Expanded>
         <Row spacing="loose">

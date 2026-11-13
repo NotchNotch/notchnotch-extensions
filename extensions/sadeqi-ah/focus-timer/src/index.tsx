@@ -71,6 +71,15 @@ function FocusTimer() {
       <Activity.Compact
         leading={<Ring value={progress} tone={tone} label={`${label} session`} />}
         trailing={<Text size="caption" tone={tone}>{clock(remaining)}</Text>} />
+      <Activity.Tile size="wide">
+        <Ring value={progress} tone={tone} label={`${label} session`}>
+          <Symbol name={phase === "break" ? "cup.and.saucer.fill" : "timer"} tone={tone} />
+        </Ring>
+        <Column spacing="none">
+          <Text size="caption" tone="secondary">{paused ? "PAUSED" : label.toUpperCase()}</Text>
+          <Value unit="left" tone={paused ? "secondary" : tone}>{clock(remaining)}</Value>
+        </Column>
+      </Activity.Tile>
       <Activity.Expanded>
         <Row spacing="loose">
           <Ring value={progress} size="title" tone={tone} label={`${label} session`}>
