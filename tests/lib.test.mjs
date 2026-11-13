@@ -55,4 +55,8 @@ test("an extension that uses a capability needs the app that first served it", a
   assert.equal(minimumAppVersionFor({ permissions: [] }, renderer), minimumAppVersion);
   assert.equal(minimumAppVersionFor({ permissions: [] }, renderer + '(0, import_react2.createElement)("ring", { value })'), "0.11.0");
   assert.equal(minimumAppVersionFor({ permissions: ["calendar"] }, 'React.createElement("value", { unit })'), "0.11.0");
+  // Drops: older apps reject the file-read permission, and draw no drop zones or files.
+  assert.equal(minimumAppVersionFor({ permissions: ["file-read"] }), "0.14.0");
+  assert.equal(minimumAppVersionFor({ permissions: [] }, 'React.createElement("dropZone", { id })'), "0.14.0");
+  assert.equal(minimumAppVersionFor({ permissions: [] }, 'React.createElement("fileGrid", { files })'), "0.14.0");
 });
