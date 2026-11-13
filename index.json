@@ -1,9 +1,39 @@
 {
   "format": 1,
-  "sequence": 14,
-  "generated": "2026-11-13T01:15:47Z",
-  "expires": "2026-12-13T01:15:47Z",
+  "sequence": 15,
+  "generated": "2026-11-13T15:49:22Z",
+  "expires": "2026-12-13T15:49:22Z",
   "extensions": [
+    {
+      "handle": "sadeqi-ah/airdrop",
+      "manifest": {
+        "id": "dev.notchnotch.airdrop",
+        "name": "AirDrop",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "accent": "blue",
+        "description": "Drop files on the notch to send them with AirDrop, without keeping them anywhere.",
+        "categories": [
+          "Productivity"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/airdrop"
+      },
+      "package": {
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.airdrop%401.0.0/airdrop-1.0.0.notchext",
+        "sha256": "63f1742f1df3603a4ff5852125b178b7bef8cde69fe6434ac6d18154c0f588f9",
+        "size": 358933
+      },
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/62b46d9392f983ebd75efb00d55673549ad1479b/extensions/sadeqi-ah/airdrop/assets/icon.png",
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/62b46d9392f983ebd75efb00d55673549ad1479b/extensions/sadeqi-ah/airdrop/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/62b46d9392f983ebd75efb00d55673549ad1479b/extensions/sadeqi-ah/airdrop/CHANGELOG.md",
+      "minimumAppVersion": "0.14.0",
+      "published": "2026-11-13T15:49:22Z"
+    },
     {
       "handle": "sadeqi-ah/battery",
       "manifest": {
@@ -426,6 +456,66 @@
       "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/moon-phase/CHANGELOG.md",
       "minimumAppVersion": "0.7.0",
       "published": "2026-11-12T17:19:47Z"
+    },
+    {
+      "handle": "sadeqi-ah/open-with",
+      "manifest": {
+        "id": "dev.notchnotch.open-with",
+        "name": "Open With",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "accent": "purple",
+        "description": "Drop files on the notch and pick the app that opens them.",
+        "categories": [
+          "Productivity"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/open-with"
+      },
+      "package": {
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.open-with%401.0.0/open-with-1.0.0.notchext",
+        "sha256": "76ce761c9cca4e1622d6867329565d616ec602a14eced2f4f9e70a1bc9099be4",
+        "size": 349041
+      },
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/62b46d9392f983ebd75efb00d55673549ad1479b/extensions/sadeqi-ah/open-with/assets/icon.png",
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/62b46d9392f983ebd75efb00d55673549ad1479b/extensions/sadeqi-ah/open-with/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/62b46d9392f983ebd75efb00d55673549ad1479b/extensions/sadeqi-ah/open-with/CHANGELOG.md",
+      "minimumAppVersion": "0.14.0",
+      "published": "2026-11-13T15:49:22Z"
+    },
+    {
+      "handle": "sadeqi-ah/quick-look",
+      "manifest": {
+        "id": "dev.notchnotch.quick-look",
+        "name": "Quick Look",
+        "version": "1.0.0",
+        "apiVersion": 1,
+        "entry": "bundle.js",
+        "permissions": [],
+        "icon": "icon.png",
+        "accent": "yellow",
+        "description": "Drop files on the notch to preview them in Quick Look.",
+        "categories": [
+          "Productivity"
+        ],
+        "license": "MIT",
+        "author": "sadeqi-ah",
+        "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/quick-look"
+      },
+      "package": {
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.quick-look%401.0.0/quick-look-1.0.0.notchext",
+        "sha256": "5b2d6a18bd4fb14436dab051434d3fc0e85da3913bdba2d5d55b5d03c05b3f3d",
+        "size": 352480
+      },
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/62b46d9392f983ebd75efb00d55673549ad1479b/extensions/sadeqi-ah/quick-look/assets/icon.png",
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/62b46d9392f983ebd75efb00d55673549ad1479b/extensions/sadeqi-ah/quick-look/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/62b46d9392f983ebd75efb00d55673549ad1479b/extensions/sadeqi-ah/quick-look/CHANGELOG.md",
+      "minimumAppVersion": "0.14.0",
+      "published": "2026-11-13T15:49:22Z"
     },
     {
       "handle": "sadeqi-ah/service-status",
