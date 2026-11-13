@@ -11,14 +11,16 @@ export const repository = process.env.GITHUB_REPOSITORY || "NotchNotch/notchnotc
 export const extensionsDirectory = path.join(root, "extensions");
 /** The first NotchNotch with the Store. Raise it when the catalog needs a newer app. */
 export const minimumAppVersion = "0.7.0";
-/** The first NotchNotch that serves each system capability, by permission name. */
-export const capabilityAppVersions = { calendar: "0.9.0", "now-playing": "0.9.0", battery: "0.11.0", system: "0.11.0" };
+/** The first NotchNotch that serves each system capability or permission, by permission name. Older apps reject a permission they don't know. */
+export const capabilityAppVersions = { calendar: "0.9.0", "now-playing": "0.9.0", battery: "0.11.0", system: "0.11.0", "file-read": "0.14.0" };
 /**
  * The first NotchNotch that draws each component, by node type. An older app
  * rejects a whole snapshot with a node type it doesn't know (0.11 and later
  * leave it out instead).
  */
-export const componentAppVersions = { value: "0.11.0", ring: "0.11.0" };
+export const componentAppVersions = {
+  value: "0.11.0", ring: "0.11.0", dropZone: "0.14.0", fileItem: "0.14.0", fileGrid: "0.14.0",
+};
 
 /** Node types an extension's bundle creates. The SDK's components call createElement("<type>", …). */
 export function componentsIn(bundle) {
