@@ -1,0 +1,17 @@
+{
+  "id": "dev.notchnotch.quick-look",
+  "name": "Quick Look",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "bundle.js",
+  "permissions": [],
+  "icon": "icon.png",
+  "accent": "yellow",
+  "description": "Drop files on the notch to preview them in Quick Look.",
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "author": "sadeqi-ah",
+  "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/quick-look"
+}

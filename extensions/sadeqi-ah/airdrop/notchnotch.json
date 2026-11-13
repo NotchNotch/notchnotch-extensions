@@ -1,0 +1,17 @@
+{
+  "id": "dev.notchnotch.airdrop",
+  "name": "AirDrop",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "bundle.js",
+  "permissions": [],
+  "icon": "icon.png",
+  "accent": "blue",
+  "description": "Drop files on the notch to send them with AirDrop, without keeping them anywhere.",
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "author": "sadeqi-ah",
+  "repository": "https://github.com/sadeqi-ah/notchnotch-extensions/tree/main/extensions/sadeqi-ah/airdrop"
+}
