@@ -1,5 +1,9 @@
 # Focus Timer Changelog
 
+## [1.0.6]
+
+- Its own wide tile in Home: the session ring and the time left. Shows in NotchNotch 0.13 and later; older versions ignore it.
+
 ## [1.0.5]
 
 - The session is a ring that fills as it goes, with the timer inside, and the time left reads large with "left" beside it. The wing shows a small ring too. Needs NotchNotch 0.11.
