@@ -78,7 +78,7 @@ function ServiceStatus() {
       </Section>
     </Settings>
 
-    {statuses ? <Activity id="status" title="Service Status" phase={incidents.length ? "active" : "paused"} idlePreview>
+    {statuses ? <Activity id="status" title="Service Status" phase="paused" idlePreview>
       <Activity.Compact leading={<Symbol name={incidents.length ? "exclamationmark.triangle.fill" : "checkmark.shield.fill"}
         tone={incidents.length ? "warning" : "success"} label={incidents.length ? "Incidents" : "All services working"} />}
         trailing={<Text size="caption">{incidents.length ? String(incidents.length) : "OK"}</Text>} />

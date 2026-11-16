@@ -1,5 +1,9 @@
 # Service Status Changelog
 
+## [1.0.5]
+
+- No longer stays beside the camera during an incident: the notch tells you once, and the rest waits on hover.
+
 ## [1.0.4]
 
 - Its own blue in the notch. Needs NotchNotch 0.10; older versions look as before.
