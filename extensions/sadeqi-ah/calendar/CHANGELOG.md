@@ -1,5 +1,9 @@
 # Calendar Changelog
 
+## [1.0.2]
+
+- No longer stays beside the camera before an event: the notch tells you before it and when it starts, and the rest waits on hover.
+
 ## [1.0.1]
 
 - Its own blue in the notch, for the progress of the current event and Join. Needs NotchNotch 0.10; older versions look as before.

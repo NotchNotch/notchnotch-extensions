@@ -146,7 +146,7 @@ function Calendar() {
           ? <Text tone="secondary">No upcoming timed events in the next seven days.</Text> : null}
       </Section> : null}
     </Settings>
-    {event ? <Activity id="next-event" title={event.title.slice(0, 128)} phase={imminent ? "active" : "paused"} idlePreview>
+    {event ? <Activity id="next-event" title={event.title.slice(0, 128)} phase="paused" idlePreview>
       <Activity.Compact leading={<Symbol name={ongoing ? "calendar.badge.clock" : "calendar"} />}
         trailing={<Text size="caption">{countdown(remaining, true)}</Text>} />
       {imminent ? <Activity.Peek id={`${event.id}:${ongoing ? "started" : "soon"}`}
