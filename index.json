@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "sequence": 15,
-  "generated": "2026-11-13T15:49:22Z",
-  "expires": "2026-12-13T15:49:22Z",
+  "sequence": 16,
+  "generated": "2026-11-16T11:38:28Z",
+  "expires": "2026-12-16T11:38:28Z",
   "extensions": [
     {
       "handle": "sadeqi-ah/airdrop",
@@ -39,7 +39,7 @@
       "manifest": {
         "id": "dev.notchnotch.battery",
         "name": "Battery",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "apiVersion": 1,
         "entry": "bundle.js",
         "permissions": [
@@ -82,21 +82,21 @@
           {
             "name": "whileCharging",
             "type": "toggle",
-            "title": "Show while charging",
+            "title": "Show when charging starts",
             "default": true
           }
         ]
       },
       "package": {
-        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.battery%401.0.1/battery-1.0.1.notchext",
-        "sha256": "51759e45fc48119f6f4b2575f960b5d147d91f4865f7d80b80af97dcafaa7b31",
-        "size": 342934
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.battery%401.0.2/battery-1.0.2.notchext",
+        "sha256": "05aca315e494c93a840b40c944acccc2305c3d319ba6b5257510e482dce00ac9",
+        "size": 342937
       },
-      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b26b362f8f870eba35d0b15af3972a4c24166dd3/extensions/sadeqi-ah/battery/assets/icon.png",
-      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b26b362f8f870eba35d0b15af3972a4c24166dd3/extensions/sadeqi-ah/battery/README.md",
-      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b26b362f8f870eba35d0b15af3972a4c24166dd3/extensions/sadeqi-ah/battery/CHANGELOG.md",
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/battery/assets/icon.png",
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/battery/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/battery/CHANGELOG.md",
       "minimumAppVersion": "0.11.0",
-      "published": "2026-11-13T01:15:47Z"
+      "published": "2026-11-16T11:38:28Z"
     },
     {
       "handle": "sadeqi-ah/break-reminder",
@@ -136,7 +136,7 @@
       "manifest": {
         "id": "dev.notchnotch.calendar",
         "name": "Calendar",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "apiVersion": 1,
         "entry": "bundle.js",
         "permissions": [
@@ -153,22 +153,22 @@
         "repository": "https://github.com/NotchNotch/notchnotch-extensions/tree/main/extensions/sadeqi-ah/calendar"
       },
       "package": {
-        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.calendar%401.0.1/calendar-1.0.1.notchext",
-        "sha256": "51c4030be50a0c975ccdbff262df229b2c17b669ecdf7a88c8a37a2a0bc68f77",
-        "size": 349159
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.calendar%401.0.2/calendar-1.0.2.notchext",
+        "sha256": "465c0bb72bb2b9f4cf89a7069c30a707e2d478a2211c1e68633081b4427fe4f9",
+        "size": 349242
       },
-      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/calendar/assets/icon.png",
-      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/calendar/README.md",
-      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/calendar/CHANGELOG.md",
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/calendar/assets/icon.png",
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/calendar/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/calendar/CHANGELOG.md",
       "minimumAppVersion": "0.9.0",
-      "published": "2026-11-12T17:19:47Z"
+      "published": "2026-11-16T11:38:28Z"
     },
     {
       "handle": "sadeqi-ah/countdown",
       "manifest": {
         "id": "dev.notchnotch.countdown",
         "name": "Countdown",
-        "version": "1.0.4",
+        "version": "1.0.5",
         "apiVersion": 1,
         "entry": "bundle.js",
         "permissions": [],
@@ -201,31 +201,31 @@
             "name": "besideNotch",
             "type": "toggle",
             "title": "Show Beside the Notch",
-            "default": true,
+            "default": false,
             "description": "Keep the countdown next to the camera. When off, it appears when you hover over the notch."
           }
         ]
       },
       "package": {
-        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.countdown%401.0.4/countdown-1.0.4.notchext",
-        "sha256": "2a5fb6177d3fb9f8a00bb33ba5cdabdbb511a90c595c72e648f1ad6d880acb64",
-        "size": 337025
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.countdown%401.0.5/countdown-1.0.5.notchext",
+        "sha256": "6c97ec493763766fa302938fd7992401959302250a422d2e7b93493ab0497894",
+        "size": 337114
       },
-      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/countdown/assets/icon.png",
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/countdown/assets/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/countdown/metadata/1.png"
+        "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/countdown/metadata/1.png"
       ],
-      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/countdown/README.md",
-      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/countdown/CHANGELOG.md",
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/countdown/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/countdown/CHANGELOG.md",
       "minimumAppVersion": "0.7.0",
-      "published": "2026-11-12T17:19:47Z"
+      "published": "2026-11-16T11:38:28Z"
     },
     {
       "handle": "sadeqi-ah/crypto-prices",
       "manifest": {
         "id": "dev.notchnotch.crypto-prices",
         "name": "Crypto Prices",
-        "version": "1.0.4",
+        "version": "1.0.5",
         "apiVersion": 1,
         "entry": "bundle.js",
         "permissions": [],
@@ -280,29 +280,22 @@
                 "title": "Australian Dollar"
               }
             ]
-          },
-          {
-            "name": "besideNotch",
-            "type": "toggle",
-            "title": "Show Beside the Notch",
-            "default": false,
-            "description": "Keep the first coin's price next to the camera. When off, it appears when you hover over the notch."
           }
         ]
       },
       "package": {
-        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.crypto-prices%401.0.4/crypto-prices-1.0.4.notchext",
-        "sha256": "e706591505cb2482a198281340e3a7db16e6ee84058dd9baa38af42ef24d4408",
-        "size": 365000
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.crypto-prices%401.0.5/crypto-prices-1.0.5.notchext",
+        "sha256": "8d8cd29b734c2ac8a1a1963a8d69df04c3282db744aaa0e1ad92d6b83793d9bd",
+        "size": 364869
       },
-      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/crypto-prices/assets/icon.png",
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/crypto-prices/assets/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/crypto-prices/metadata/1.png"
+        "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/crypto-prices/metadata/1.png"
       ],
-      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/crypto-prices/README.md",
-      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/crypto-prices/CHANGELOG.md",
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/crypto-prices/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/crypto-prices/CHANGELOG.md",
       "minimumAppVersion": "0.7.0",
-      "published": "2026-11-12T17:19:47Z"
+      "published": "2026-11-16T11:38:28Z"
     },
     {
       "handle": "sadeqi-ah/focus-timer",
@@ -522,7 +515,7 @@
       "manifest": {
         "id": "dev.notchnotch.service-status",
         "name": "Service Status",
-        "version": "1.0.4",
+        "version": "1.0.5",
         "apiVersion": 1,
         "entry": "bundle.js",
         "permissions": [],
@@ -548,25 +541,25 @@
         ]
       },
       "package": {
-        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.service-status%401.0.4/service-status-1.0.4.notchext",
-        "sha256": "99b61084709d03ba9d611ec3b1db67bf2ed4b83cce7e4b04addd060a7c4a2cbb",
-        "size": 332397
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.service-status%401.0.5/service-status-1.0.5.notchext",
+        "sha256": "90a35d441e8fc8504ad0c64f60e64ff6bd9176f07bcd405c159a612f5d3852c7",
+        "size": 332430
       },
-      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/service-status/assets/icon.png",
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/service-status/assets/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/service-status/metadata/1.png"
+        "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/service-status/metadata/1.png"
       ],
-      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/service-status/README.md",
-      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/service-status/CHANGELOG.md",
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/service-status/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/service-status/CHANGELOG.md",
       "minimumAppVersion": "0.7.0",
-      "published": "2026-11-12T17:19:47Z"
+      "published": "2026-11-16T11:38:28Z"
     },
     {
       "handle": "sadeqi-ah/system-monitor",
       "manifest": {
         "id": "dev.notchnotch.system-monitor",
         "name": "System Monitor",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "apiVersion": 1,
         "entry": "bundle.js",
         "permissions": [
@@ -591,22 +584,22 @@
         ]
       },
       "package": {
-        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.system-monitor%401.0.0/system-monitor-1.0.0.notchext",
-        "sha256": "60133c5f1866442ac63fb56b35fff9934a4f77332e203ac265bde132301ae161",
-        "size": 370797
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.system-monitor%401.0.1/system-monitor-1.0.1.notchext",
+        "sha256": "84d6b3dbf256e1638aabec7de5bfc0a2d0815caf9ebee4baff974a64349bcb4c",
+        "size": 370814
       },
-      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/4e6e24d3b1716a159b6bae0f50504e6479e68f9c/extensions/sadeqi-ah/system-monitor/assets/icon.png",
-      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/4e6e24d3b1716a159b6bae0f50504e6479e68f9c/extensions/sadeqi-ah/system-monitor/README.md",
-      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/4e6e24d3b1716a159b6bae0f50504e6479e68f9c/extensions/sadeqi-ah/system-monitor/CHANGELOG.md",
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/system-monitor/assets/icon.png",
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/system-monitor/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/system-monitor/CHANGELOG.md",
       "minimumAppVersion": "0.11.0",
-      "published": "2026-11-12T22:45:23Z"
+      "published": "2026-11-16T11:38:28Z"
     },
     {
       "handle": "sadeqi-ah/weather",
       "manifest": {
         "id": "dev.notchnotch.weather",
         "name": "Weather",
-        "version": "1.0.4",
+        "version": "1.0.5",
         "apiVersion": 1,
         "entry": "bundle.js",
         "permissions": [],
@@ -647,29 +640,22 @@
                 "title": "Fahrenheit, mph"
               }
             ]
-          },
-          {
-            "name": "besideNotch",
-            "type": "toggle",
-            "title": "Show Beside the Notch",
-            "default": true,
-            "description": "Keep the temperature next to the camera. When off, it appears when you hover over the notch."
           }
         ]
       },
       "package": {
-        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.weather%401.0.4/weather-1.0.4.notchext",
-        "sha256": "f12826ad358398f2bcacabff9029bb78a3ee0d6d844ab2b4c98dfb7cd3682d48",
-        "size": 345106
+        "url": "https://github.com/NotchNotch/notchnotch-extensions/releases/download/sadeqi-ah.weather%401.0.5/weather-1.0.5.notchext",
+        "sha256": "fd7d3ac6b536bd230162cee52ff67f09761f881d9894a4c60616883ae51f251d",
+        "size": 344981
       },
-      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/weather/assets/icon.png",
+      "icon": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/weather/assets/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/weather/metadata/1.png"
+        "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/weather/metadata/1.png"
       ],
-      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/weather/README.md",
-      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/effa340ce290b357dc30f86ff83ec5e91dea454e/extensions/sadeqi-ah/weather/CHANGELOG.md",
+      "readme": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/weather/README.md",
+      "changelog": "https://raw.githubusercontent.com/NotchNotch/notchnotch-extensions/b46efddc02ee910e238c417530744e5d20ae1a6a/extensions/sadeqi-ah/weather/CHANGELOG.md",
       "minimumAppVersion": "0.7.0",
-      "published": "2026-11-12T17:19:47Z"
+      "published": "2026-11-16T11:38:28Z"
     },
     {
       "handle": "sadeqi-ah/word-of-the-day",
