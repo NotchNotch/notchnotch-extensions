@@ -5,7 +5,7 @@ Current conditions, the feels-like temperature and today's high and low for your
 ## How it works
 
 - Set your city and units in **Setup**.
-- The temperature sits beside the camera; turn off **Show Beside the Notch** to see it only when you hover.
+- Hover over the notch to see the temperature.
 - Updates every 15 minutes.
 
 ## Privacy

@@ -13,7 +13,7 @@ It uses the accounts already in the Calendar app, such as iCloud, Google or Exch
 ## Use it
 
 - Choose which calendars to show in **Setup**.
-- The notch shows a countdown before your next event.
+- The notch tells you shortly before your next event, and when it starts. Hover over the notch to see what's next.
 - **Join** opens the meeting link when the event has one.
 
 NotchNotch only reads your calendars. If events don't appear, check **System Settings › Privacy & Security › Calendars** and reconnect from **Setup**.

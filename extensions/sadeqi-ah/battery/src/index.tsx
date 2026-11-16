@@ -75,8 +75,8 @@ function Battery() {
         </ListItem>
       </Section>
     </Settings>
-    {/* Paused when there's nothing to watch: it waits on hover instead of holding the wings. */}
-    <Activity id="battery" title="Battery" phase={active ? "active" : "paused"} idlePreview>
+    {/* Never holds the wings: it waits on hover and speaks up through a peek. */}
+    <Activity id="battery" title="Battery" phase="paused" idlePreview>
       <Activity.Compact
         leading={<Ring value={battery.level ?? 0} tone={tone} label="Battery" />}
         trailing={<Text size="caption" tone={tone}>{`${percent}%`}</Text>} />

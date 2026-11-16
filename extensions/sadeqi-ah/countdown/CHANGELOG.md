@@ -1,5 +1,9 @@
 # Countdown Changelog
 
+## [1.0.5]
+
+- Waits on hover by default. Turn on Show Beside the Notch to keep it next to the camera.
+
 ## [1.0.4]
 
 - Its own purple in the notch, for the time left. Needs NotchNotch 0.10; older versions look as before.

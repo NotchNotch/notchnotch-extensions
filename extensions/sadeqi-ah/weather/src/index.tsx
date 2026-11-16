@@ -4,8 +4,8 @@ import {
 } from "@notchnotch/sdk";
 import { start } from "@notchnotch/runtime";
 
-type Preferences = { city: string; units: "metric" | "imperial"; besideNotch: boolean };
-const { city, units, besideNotch } = getPreferenceValues<Preferences>();
+type Preferences = { city: string; units: "metric" | "imperial" };
+const { city, units } = getPreferenceValues<Preferences>();
 const imperial = units === "imperial";
 
 type Place = { name: string; country?: string; latitude: number; longitude: number };
@@ -97,7 +97,7 @@ function WeatherExtension() {
       </Section>
     </Settings>
 
-    {weather && now ? <Activity id="weather" title="Weather" phase={besideNotch ? "active" : "paused"} idlePreview>
+    {weather && now ? <Activity id="weather" title="Weather" phase="paused" idlePreview>
       <Activity.Compact leading={<Symbol name={now.symbol} label={now.label} />} trailing={<Text size="caption">{degrees(weather.temperature)}</Text>} />
       <Activity.Expanded>
         <Row spacing="tight">

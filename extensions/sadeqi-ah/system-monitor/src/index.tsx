@@ -87,8 +87,8 @@ function SystemMonitor() {
         <ListItem icon="internaldrive" title={`Disk ${percent(disk)}`} subtitle={`${bytes(status.disk.total - status.disk.used)} available`} />
       </Section>
     </Settings>
-    {/* A glance: paused, so it waits on hover, until the Mac is busy enough to say so. */}
-    <Activity id="system" title="System Monitor" phase={busy && busyAlert ? "active" : "paused"} idlePreview>
+    {/* A glance: it waits on hover, and a peek says when the Mac is busy. */}
+    <Activity id="system" title="System Monitor" phase="paused" idlePreview>
       <Activity.Compact
         leading={<Ring value={cpu} tone={busy ? "warning" : "accent"} label="CPU" />}
         trailing={<Text size="caption" tone={busy ? "warning" : "accent"}>{percent(cpu)}</Text>} />
