@@ -1,5 +1,9 @@
 # Weather Changelog
 
+## [1.0.5]
+
+- No longer stays beside the camera: hover over the notch to see the temperature. The Show Beside the Notch setting is gone.
+
 ## [1.0.4]
 
 - Its own cyan in the notch, for the weather symbol. Needs NotchNotch 0.10; older versions look as before.
