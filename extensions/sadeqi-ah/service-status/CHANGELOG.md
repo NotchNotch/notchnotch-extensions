@@ -1,5 +1,9 @@
 # Service Status Changelog
 
+## [1.0.6]
+
+- A new Store screenshot, in its own color.
+
 ## [1.0.5]
 
 - No longer stays beside the camera during an incident: the notch tells you once, and the rest waits on hover.

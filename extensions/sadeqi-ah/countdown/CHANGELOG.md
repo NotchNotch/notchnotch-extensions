@@ -1,5 +1,9 @@
 # Countdown Changelog
 
+## [1.0.6]
+
+- A new Store screenshot, in its own color.
+
 ## [1.0.5]
 
 - Waits on hover by default. Turn on Show Beside the Notch to keep it next to the camera.
