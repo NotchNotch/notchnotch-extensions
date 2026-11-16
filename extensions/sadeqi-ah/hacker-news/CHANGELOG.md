@@ -1,5 +1,9 @@
 # Hacker News Changelog
 
+## [1.0.5]
+
+- A new Store screenshot, in its own color.
+
 ## [1.0.4]
 
 - Its own orange in the notch. Needs NotchNotch 0.10; older versions look as before.

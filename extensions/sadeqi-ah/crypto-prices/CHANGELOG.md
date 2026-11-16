@@ -1,5 +1,9 @@
 # Crypto Prices Changelog
 
+## [1.0.6]
+
+- A new Store screenshot, in its own color.
+
 ## [1.0.5]
 
 - Never stays beside the camera: hover over the notch to see prices. The Show Beside the Notch setting is gone.

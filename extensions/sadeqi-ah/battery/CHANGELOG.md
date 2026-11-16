@@ -1,5 +1,9 @@
 # Battery Changelog
 
+## [1.0.3]
+
+- A Store screenshot.
+
 ## [1.0.2]
 
 - No longer stays beside the camera while charging or low: the notch tells you once, and the rest waits on hover.

@@ -1,5 +1,9 @@
 # Weather Changelog
 
+## [1.0.6]
+
+- A new Store screenshot, in its own color.
+
 ## [1.0.5]
 
 - No longer stays beside the camera: hover over the notch to see the temperature. The Show Beside the Notch setting is gone.

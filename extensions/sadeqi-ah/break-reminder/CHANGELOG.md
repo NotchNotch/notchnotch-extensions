@@ -1,5 +1,9 @@
 # Break Reminder Changelog
 
+## [1.0.5]
+
+- A new Store screenshot, in its own color.
+
 ## [1.0.4]
 
 - Its own mint in the notch, for the minutes left and the main button. Needs NotchNotch 0.10; older versions look as before.
