@@ -1,7 +1,7 @@
 {
   "id": "dev.notchnotch.battery",
   "name": "Battery",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "apiVersion": 1,
   "entry": "bundle.js",
   "permissions": [
@@ -44,7 +44,7 @@
     {
       "name": "whileCharging",
       "type": "toggle",
-      "title": "Show while charging",
+      "title": "Show when charging starts",
       "default": true
     }
   ]
