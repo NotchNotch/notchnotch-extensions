@@ -5,7 +5,7 @@ Prices and daily change for the coins you follow.
 ## How it works
 
 - List [CoinGecko coin IDs](https://www.coingecko.com) in **Setup**, such as `bitcoin, ethereum, solana`, and pick a currency.
-- Hover over the notch to see prices and 24-hour change. Turn on **Show Beside the Notch** to keep the first price next to the camera.
+- Hover over the notch to see prices and 24-hour change.
 - Refreshed every 2 minutes.
 
 ## Privacy

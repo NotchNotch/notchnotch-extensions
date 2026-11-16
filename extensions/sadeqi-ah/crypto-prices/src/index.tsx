@@ -4,8 +4,8 @@ import {
 } from "@notchnotch/sdk";
 import { start } from "@notchnotch/runtime";
 
-type Preferences = { coins: string; currency: string; besideNotch: boolean };
-const { coins, currency, besideNotch } = getPreferenceValues<Preferences>();
+type Preferences = { coins: string; currency: string };
+const { coins, currency } = getPreferenceValues<Preferences>();
 const ids = coins.split(",").map((coin) => coin.trim().toLowerCase()).filter(Boolean).slice(0, 8);
 
 type Price = { id: string; price: number; change: number };
@@ -66,7 +66,7 @@ function CryptoPrices() {
       </Section>
     </Settings>
 
-    {prices && first ? <Activity id="prices" title="Crypto Prices" phase={besideNotch ? "active" : "paused"} idlePreview>
+    {prices && first ? <Activity id="prices" title="Crypto Prices" phase="paused" idlePreview>
       <Activity.Compact leading={<Symbol name="bitcoinsign.circle.fill" tone={first.change >= 0 ? "success" : "danger"}
         label={`${title(first.id)} ${first.change >= 0 ? "up" : "down"}`} />}
         trailing={<Text size="caption">{money(first.price, true)}</Text>} />
