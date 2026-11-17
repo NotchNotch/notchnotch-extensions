@@ -1,5 +1,9 @@
 # Focus Timer Changelog
 
+## [1.0.7]
+
+- A new Store screenshot, on NotchNotch's own wallpaper.
+
 ## [1.0.6]
 
 - Its own wide tile in Home: the session ring and the time left. Shows in NotchNotch 0.13 and later; older versions ignore it.

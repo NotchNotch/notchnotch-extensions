@@ -1,5 +1,9 @@
 # Battery Changelog
 
+## [1.0.4]
+
+- A new Store screenshot, on NotchNotch's own wallpaper.
+
 ## [1.0.3]
 
 - A Store screenshot.

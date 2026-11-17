@@ -1,5 +1,9 @@
 # Weather Changelog
 
+## [1.0.7]
+
+- A new Store screenshot, on NotchNotch's own wallpaper.
+
 ## [1.0.6]
 
 - A new Store screenshot, in its own color.
