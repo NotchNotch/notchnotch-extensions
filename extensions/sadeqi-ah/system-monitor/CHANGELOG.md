@@ -1,5 +1,9 @@
 # System Monitor Changelog
 
+## [1.0.3]
+
+- A new Store screenshot, on NotchNotch's own wallpaper.
+
 ## [1.0.2]
 
 - A Store screenshot.
